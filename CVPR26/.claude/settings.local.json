@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mdls -name kMDItemNumberOfPages program/CVPR_main_conf_2026_15.pdf ours/CVPR_015_diff.pdf)",
+      "Bash(mdls -name kMDItemNumberOfPages /Users/koike/Dropbox/Workspace/Tohoku2/dev/CVPR26/program/CVPR_main_conf_2026_15.pdf /Users/koike/Dropbox/Workspace/Tohoku2/dev/CVPR26/ours/CVPR_015_diff.pdf)",
+      "Bash(python3 -c \"from pypdf import PdfReader; r = PdfReader\\('/Users/koike/Dropbox/Workspace/Tohoku2/dev/CVPR26/program/CVPR_main_conf_2026_15.pdf'\\); print\\('program pages:', len\\(r.pages\\)\\)\")",
+      "Bash(pdfinfo /Users/koike/Dropbox/Workspace/Tohoku2/dev/CVPR26/program/CVPR_main_conf_2026_15.pdf)",
+      "Bash(pdfinfo /Users/koike/Dropbox/Workspace/Tohoku2/dev/CVPR26/ours/CVPR_015_diff.pdf)",
+      "Bash(pdftotext -layout program/CVPR_main_conf_2026_15.pdf program/program.txt)",
+      "Bash(/tmp/cvpr_venv/bin/python -c ' *)",
+      "Bash(/tmp/cvpr_venv/bin/python -m http.server 8765)",
+      "Bash(curl -s http://localhost:8765/)"
+    ]
+  }
+}

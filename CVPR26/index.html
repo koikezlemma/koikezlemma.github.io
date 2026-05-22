@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>CVPR 2026 参加ガイド</title>
+<meta name="description" content="CVPR 2026 メインカンファレンスのセッション・論文を研究テーマ別に閲覧するための同僚向けガイド" />
+<meta name="theme-color" content="#0d3b66" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="#/">
+        <span class="brand-mark">CVPR <span>2026</span></span>
+        <span class="brand-sub">Denver · June 5–7</span>
+      </a>
+      <nav class="site-nav" id="dayNav" aria-label="日付ナビゲーション">
+        <a href="#/day/friday">金</a>
+        <a href="#/day/saturday">土</a>
+        <a href="#/day/sunday">日</a>
+        <a href="#/themes" class="site-nav__themes">テーマ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app-main" aria-live="polite">
+    <div class="loading">読み込み中…</div>
+  </main>
+
+  <template id="tpl-day">
+    <section class="day-view">
+      <div class="day-view__hd">
+        <h1 class="day-view__title"></h1>
+        <p class="day-view__sub"></p>
+      </div>
+
+      <div class="theme-legend" id="themeLegend"></div>
+
+      <ol class="timeline" id="timeline"></ol>
+
+      <div class="my-plan-summary" id="myPlanSummary"></div>
+    </section>
+  </template>
+
+  <template id="tpl-timeline-block">
+    <li class="tl-block">
+      <div class="tl-time"></div>
+      <div class="tl-sessions"></div>
+    </li>
+  </template>
+
+  <template id="tpl-session-card">
+    <article class="sess-card">
+      <a class="sess-card__link" href="#">
+        <header class="sess-card__hd">
+          <span class="sess-card__code"></span>
+          <h3 class="sess-card__name"></h3>
+        </header>
+        <p class="sess-card__meta"></p>
+        <ul class="sess-card__themes"></ul>
+        <p class="sess-card__count"></p>
+      </a>
+      <button class="sess-card__plan" data-action="toggle-plan" type="button" aria-pressed="false">
+        <span class="ico" aria-hidden="true">＋</span><span class="lbl">聴講予定</span>
+      </button>
+    </article>
+  </template>
+
+  <template id="tpl-session">
+    <section class="session-view">
+      <a class="back-link" href="#/">← プログラムへ戻る</a>
+      <div class="session-view__hd">
+        <p class="session-view__day"></p>
+        <h1 class="session-view__title"></h1>
+        <p class="session-view__meta"></p>
+        <div class="session-view__actions">
+          <button class="btn btn--plan" data-action="toggle-plan" type="button" aria-pressed="false">
+            <span class="ico" aria-hidden="true">＋</span><span class="lbl">聴講予定に追加</span>
+          </button>
+        </div>
+      </div>
+      <div class="theme-banner" id="sessionThemeBanner"></div>
+      <ol class="paper-list" id="paperList"></ol>
+    </section>
+  </template>
+
+  <template id="tpl-paper-row">
+    <li class="paper-row">
+      <div class="paper-row__no"></div>
+      <div class="paper-row__body">
+        <h3 class="paper-row__title"></h3>
+        <p class="paper-row__authors"></p>
+        <ul class="paper-row__badges"></ul>
+        <a class="paper-row__detail" href="#" hidden>論文まとめを読む →</a>
+      </div>
+    </li>
+  </template>
+
+  <template id="tpl-themes">
+    <section class="themes-view">
+      <h1>研究テーマ別 関連論文</h1>
+      <p class="themes-view__intro">CVPR 2026 から、以下のテーマに関連する論文をピックアップしています。★が多いほど関連度・重要度が高いと判定したものです。</p>
+      <div class="themes-grid" id="themesGrid"></div>
+    </section>
+  </template>
+
+  <template id="tpl-theme-card">
+    <article class="theme-card">
+      <header class="theme-card__hd">
+        <span class="theme-card__chip"></span>
+        <h2 class="theme-card__name"></h2>
+      </header>
+      <p class="theme-card__desc"></p>
+      <ol class="theme-card__papers"></ol>
+    </article>
+  </template>
+
+  <template id="tpl-paper-detail">
+    <article class="paper-detail">
+      <a class="back-link" href="#">← 戻る</a>
+      <header class="paper-detail__hd">
+        <p class="paper-detail__breadcrumb"></p>
+        <h1 class="paper-detail__title"></h1>
+        <p class="paper-detail__authors"></p>
+        <div class="paper-detail__meta"></div>
+      </header>
+      <section class="paper-detail__body"></section>
+    </article>
+  </template>
+
+  <footer class="site-footer">
+    <p>研究テーマに基づく独自抽出。公式プログラム: <a href="https://cvpr.thecvf.com/Conferences/2026" rel="noopener" target="_blank">CVPR 2026</a></p>
+    <p class="site-footer__small">最終更新: <span id="lastUpdated">2026-05-22</span> · 聴講予定はブラウザ (localStorage) に保存されます</p>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
