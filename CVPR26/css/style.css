@@ -132,6 +132,12 @@ a { color: var(--c-link); }
   background: rgba(255, 255, 255, 0.22);
 }
 .site-nav__themes { background: rgba(255, 255, 255, 0.16) !important; }
+.site-nav__awards {
+  background: var(--c-award) !important;
+  color: #1a1f2e !important;
+  font-weight: 600 !important;
+}
+.site-nav__awards:hover { background: #e0b524 !important; }
 
 /* ===== Main / shell ===== */
 .app-main {
@@ -174,8 +180,17 @@ a { color: var(--c-link); }
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 0.5rem 0 1.5rem;
+  margin: 0.5rem 0 0.5rem;
 }
+.marker-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+  font-size: var(--fs-xs);
+}
+.marker-legend .badge-award,
+.marker-legend .badge-highlight { font-size: var(--fs-xs); }
 .theme-legend__chip {
   display: inline-flex;
   align-items: center;
@@ -560,6 +575,92 @@ a { color: var(--c-link); }
   color: var(--c-text-soft);
 }
 .rating { letter-spacing: 0.05em; color: var(--c-award); }
+
+/* ===== Awards view ===== */
+.awards-view h1 { margin: 0 0 0.25rem; font-size: var(--fs-xxl); }
+.awards-view__intro {
+  margin: 0 0 1rem;
+  color: var(--c-text-muted);
+  font-size: var(--fs-sm);
+}
+.awards-day-nav {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+}
+.awards-day-nav a {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--r-sm);
+  background: var(--c-panel);
+  border: 1px solid var(--c-border-strong);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  color: var(--c-text);
+}
+.awards-day-nav a:hover, .awards-day-nav a.is-active {
+  background: var(--c-award-bg);
+  border-color: var(--c-award);
+  color: var(--c-award);
+}
+.awards-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.award-row {
+  background: var(--c-panel);
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--c-award);
+  border-radius: var(--r-md);
+  padding: 0.7rem 0.85rem;
+}
+.award-row__title {
+  margin: 0;
+  font-size: var(--fs-md);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.award-row__authors {
+  margin: 0.2rem 0 0;
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+}
+.award-row__sessions {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0;
+  padding: 0;
+}
+.award-row__sessions li {
+  display: inline-block;
+}
+.award-row__sessions a {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: var(--c-primary-bg);
+  color: var(--c-primary);
+  text-decoration: none;
+  border: 1px solid var(--c-primary);
+}
+.award-row__sessions a:hover { background: var(--c-primary); color: white; }
+.award-row__detail {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+.award-row__detail:hover { text-decoration: underline; }
+.award-row__detail[hidden] { display: none; }
 
 /* ===== Paper detail view ===== */
 .paper-detail__hd {

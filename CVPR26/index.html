@@ -20,6 +20,7 @@
         <a href="#/day/saturday">土</a>
         <a href="#/day/sunday">日</a>
         <a href="#/themes" class="site-nav__themes">テーマ</a>
+        <a href="#/awards" class="site-nav__awards">🏆 Award</a>
       </nav>
     </div>
   </header>
@@ -36,6 +37,10 @@
       </div>
 
       <div class="theme-legend" id="themeLegend"></div>
+      <div class="marker-legend">
+        <span class="badge-award">🏆 Award候補</span>
+        <span class="badge-highlight">❉ Highlight</span>
+      </div>
 
       <ol class="timeline" id="timeline"></ol>
 
@@ -114,6 +119,30 @@
       <p class="theme-card__desc"></p>
       <ol class="theme-card__papers"></ol>
     </article>
+  </template>
+
+  <template id="tpl-awards">
+    <section class="awards-view">
+      <h1>🏆 Award 候補論文</h1>
+      <p class="awards-view__intro">CVPR 2026 は <strong>74 件</strong>の論文を Best Paper Award 候補に指名しています。日毎の候補リストです。Oral セッションと、対応する Poster セッションの両方で発表されます。</p>
+      <nav class="awards-day-nav">
+        <a href="#/awards/friday">金 6/5</a>
+        <a href="#/awards/saturday">土 6/6</a>
+        <a href="#/awards/sunday">日 6/7</a>
+      </nav>
+      <ol class="awards-list" id="awardsList"></ol>
+    </section>
+  </template>
+
+  <template id="tpl-award-row">
+    <li class="award-row">
+      <div class="award-row__body">
+        <h3 class="award-row__title"></h3>
+        <p class="award-row__authors"></p>
+        <ul class="award-row__sessions"></ul>
+        <a class="award-row__detail" href="#" hidden>論文まとめを読む →</a>
+      </div>
+    </li>
   </template>
 
   <template id="tpl-paper-detail">

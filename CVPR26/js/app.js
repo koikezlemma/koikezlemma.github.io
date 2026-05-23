@@ -113,8 +113,22 @@ function getRelatedPaperByKey(paperKey) {
     const p = (t.related_papers || []).find((rp) => rp.key === paperKey);
     if (p) return { theme: t, paper: p };
   }
+  // Award-candidate papers (no theme association, but may have summary)
+  for (const dayKey of ["friday", "saturday", "sunday"]) {
+    const list = state.themes?.awards?.[dayKey] || [];
+    const p = list.find((ap) => ap.key === paperKey);
+    if (p) return { theme: AWARD_PSEUDO_THEME, paper: { ...p, day: DAY_META[dayKey]?.title } };
+  }
   return null;
 }
+
+const AWARD_PSEUDO_THEME = {
+  id: "award",
+  name: "Award 候補論文",
+  short_name: "Award",
+  color: "#d4a017",
+  bg: "#fbf4dc",
+};
 
 // ---------- router ----------
 const router = {
@@ -123,6 +137,8 @@ const router = {
     { re: /^\/day\/(friday|saturday|sunday)$/, handler: (m) => renderDay(m[1]) },
     { re: /^\/session\/([\w\-]+)$/, handler: (m) => renderSession(m[1]) },
     { re: /^\/themes$/, handler: () => renderThemes() },
+    { re: /^\/awards$/, handler: () => renderAwards("friday") },
+    { re: /^\/awards\/(friday|saturday|sunday)$/, handler: (m) => renderAwards(m[1]) },
     { re: /^\/paper\/([\w\-]+)$/, handler: (m) => renderPaperDetail(m[1]) },
   ],
   dispatch() {
@@ -232,7 +248,14 @@ function renderSessionCard(sessionId, session, kind, block) {
   link.href = `#/session/${sessionId}`;
 
   const codeEl = card.querySelector(".sess-card__code");
-  const code = session.code || (kind === "oral" ? `Oral ${sessionId.replace("oral-", "")}` : `Poster ${sessionId.replace("poster-", "")}`);
+  let code = session.code;
+  if (!code) {
+    if (sessionId.startsWith("oral-")) code = `Oral ${sessionId.replace("oral-", "")}`;
+    else if (sessionId.startsWith("poster-")) code = `Poster ${sessionId.replace("poster-", "")}`;
+    else if (sessionId.startsWith("findings-")) code = "Findings";
+    else if (sessionId.startsWith("demos-")) code = "DEMOS";
+    else code = sessionId;
+  }
   codeEl.textContent = code;
 
   card.querySelector(".sess-card__name").textContent = session.name || sessionId;
@@ -309,7 +332,11 @@ function renderSession(sessionId) {
   }
   const node = tpl("tpl-session");
   const { day, session, kind } = found;
-  node.querySelector(".session-view__day").textContent = `${day.name} · ${kind === "oral" ? "Oral Session" : "Poster Session"}`;
+  const kindLabel = sessionId.startsWith("oral-") ? "Oral Session"
+    : sessionId.startsWith("demos-") ? "DEMOS"
+    : sessionId.startsWith("findings-") ? "Findings Posters"
+    : "Poster Session";
+  node.querySelector(".session-view__day").textContent = `${day.name} · ${kindLabel}`;
   node.querySelector(".session-view__title").textContent = session.name || sessionId;
   const metaParts = [];
   if (session.time) metaParts.push(session.time);
@@ -360,7 +387,7 @@ function renderSession(sessionId) {
     }
     if (p.is_highlight) {
       const b = document.createElement("li");
-      b.innerHTML = `<span class="badge-highlight">Highlight</span>`;
+      b.innerHTML = `<span class="badge-highlight">❉ Highlight</span>`;
       badges.appendChild(b);
     }
 
@@ -381,7 +408,6 @@ function renderSession(sessionId) {
         b.appendChild(span);
         badges.appendChild(b);
       }
-      // detail link (use the first matched paper's key)
       const detailLink = row.querySelector(".paper-row__detail");
       const relKey = matchedThemes[0].paper.key;
       if (relKey && getPaperSummary(relKey)) {
@@ -389,9 +415,31 @@ function renderSession(sessionId) {
         detailLink.hidden = false;
       }
     }
+    // Award-candidate detail link (only if no theme already showed a link)
+    if (p.is_award_candidate) {
+      const detailLink = row.querySelector(".paper-row__detail");
+      if (detailLink.hidden) {
+        const award = findAwardByTitle(p.title);
+        if (award && getPaperSummary(award.key)) {
+          detailLink.href = `#/paper/${award.key}`;
+          detailLink.hidden = false;
+        }
+      }
+    }
     listEl.appendChild(row);
   }
   swap(node);
+}
+
+function findAwardByTitle(title) {
+  if (!title) return null;
+  const norm = title.toLowerCase().slice(0, 60).trim();
+  for (const dayKey of ["friday", "saturday", "sunday"]) {
+    const list = state.themes?.awards?.[dayKey] || [];
+    const found = list.find((a) => (a.title || "").toLowerCase().slice(0, 60).trim() === norm);
+    if (found) return found;
+  }
+  return null;
 }
 
 function matchPaperToThemes(sessionId, p) {
@@ -408,6 +456,52 @@ function matchPaperToThemes(sessionId, p) {
     }
   }
   return out;
+}
+
+function renderAwards(dayKeyStr) {
+  const node = tpl("tpl-awards");
+  // Highlight active day in the day nav
+  node.querySelectorAll(".awards-day-nav a").forEach((a) => {
+    if (a.getAttribute("href") === `#/awards/${dayKeyStr}`) {
+      a.classList.add("is-active");
+    }
+  });
+
+  const list = node.querySelector("#awardsList");
+  const awards = state.themes?.awards?.[dayKeyStr] || [];
+  if (awards.length === 0) {
+    list.innerHTML = `<p style="color:var(--c-text-muted);font-size:var(--fs-sm)">該当する候補論文がありません。</p>`;
+  }
+  for (const ap of awards) {
+    const row = tpl("tpl-award-row");
+    row.querySelector(".award-row__title").textContent = ap.title;
+    row.querySelector(".award-row__authors").textContent = (ap.authors || []).join(", ");
+
+    const sessUl = row.querySelector(".award-row__sessions");
+    for (const sid of ap.session_ids || []) {
+      const found = findSession(sid);
+      if (!found) continue;
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `#/session/${sid}`;
+      const label = sid.startsWith("oral-")
+        ? `${found.session.code || sid.replace("oral-", "Oral ")}`
+        : sid.startsWith("findings-") ? "Findings"
+        : sid.startsWith("demos-") ? "DEMOS"
+        : `Poster ${sid.replace("poster-", "")}`;
+      a.textContent = `${label} · ${found.session.time || ""}`.trim();
+      li.appendChild(a);
+      sessUl.appendChild(li);
+    }
+
+    const detail = row.querySelector(".award-row__detail");
+    if (getPaperSummary(ap.key)) {
+      detail.href = `#/paper/${ap.key}`;
+      detail.hidden = false;
+    }
+    list.appendChild(row);
+  }
+  swap(node);
 }
 
 function renderThemes() {
@@ -456,22 +550,46 @@ function renderPaperDetail(paperKey) {
   }
   const node = tpl("tpl-paper-detail");
   const { theme, paper } = rel;
-  const backLink = node.querySelector(".back-link");
-  backLink.href = `#/session/${paper.session_id}`;
-  backLink.textContent = `← セッションへ戻る`;
+  // For award papers, paper has session_ids[] instead of single session_id
+  const primarySid = paper.session_id
+    || paper.oral_session
+    || paper.poster_session
+    || (paper.session_ids && paper.session_ids[0]);
 
-  node.querySelector(".paper-detail__breadcrumb").innerHTML =
-    `<a href="#/themes">関連テーマ</a> · <span style="color:${theme.color}">${escapeHtml(theme.short_name)}</span>`;
+  const backLink = node.querySelector(".back-link");
+  if (theme.id === "award") {
+    const dayKey = paperKey.split("-")[1]; // "friday" | "saturday" | "sunday"
+    backLink.href = `#/awards/${dayKey}`;
+    backLink.textContent = `← Award 候補一覧へ戻る`;
+  } else {
+    backLink.href = `#/session/${primarySid}`;
+    backLink.textContent = `← セッションへ戻る`;
+  }
+
+  const breadcrumb = node.querySelector(".paper-detail__breadcrumb");
+  if (theme.id === "award") {
+    breadcrumb.innerHTML = `<a href="#/awards">Award 候補</a> · <span style="color:${theme.color}">${escapeHtml(theme.short_name)}</span>`;
+  } else {
+    breadcrumb.innerHTML = `<a href="#/themes">関連テーマ</a> · <span style="color:${theme.color}">${escapeHtml(theme.short_name)}</span>`;
+  }
   node.querySelector(".paper-detail__title").textContent = paper.title;
   node.querySelector(".paper-detail__authors").textContent = (paper.authors || []).join(", ");
 
   const meta = node.querySelector(".paper-detail__meta");
   const rating = "★".repeat(summary.rating || 0) + "☆".repeat(Math.max(0, 3 - (summary.rating || 0)));
+  let sessLinks = "";
+  if (paper.session_ids && paper.session_ids.length > 0) {
+    sessLinks = paper.session_ids.map((sid) =>
+      `<a href="#/session/${sid}">${escapeHtml(sessionShortName(sid))}</a>`
+    ).join(" / ");
+  } else if (primarySid) {
+    sessLinks = `<a href="#/session/${primarySid}">${escapeHtml(sessionShortName(primarySid))}</a>`;
+  }
   meta.innerHTML =
     `<span class="rating" style="font-weight:600">${rating}</span>` +
     ` <span class="theme-badge" style="--badge-color:${theme.color};--badge-bg:${theme.bg}"><span class="dot"></span>${escapeHtml(theme.short_name)}</span>` +
     (summary.arxiv_url ? ` <a href="${summary.arxiv_url}" target="_blank" rel="noopener">arXivで読む →</a>` : "") +
-    ` <a href="#/session/${paper.session_id}">${escapeHtml(sessionShortName(paper.session_id))}</a>`;
+    ` ${sessLinks}`;
 
   const body = node.querySelector(".paper-detail__body");
   body.innerHTML = renderSummaryBody(summary);

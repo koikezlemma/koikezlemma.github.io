@@ -10,16 +10,11 @@
       "related_papers": [
         {
           "key": "pdf-gs",
-          "title": "PDF-GS: Progressive Distractor Filtering for Robust 3D Gaussian Splatting",
+          "title": "PDF-GS: Progressive Distractor Filtering for Robust 3D Gaussian Splatting, Kangmin Seo, MinKyu Lee, Tae-Young Kim, ByeongCheol Lee, JoonSeoung An",
           "authors": [
-            "Kangmin Seo",
-            "MinKyu Lee",
-            "Tae-Young Kim",
-            "ByeongCheol Lee",
-            "JoonSeoung An",
             "Jae-Pil Heo"
           ],
-          "session_id": "poster-1",
+          "session_id": "findings-friday",
           "poster_id": 45,
           "oral_position": null,
           "day": "Friday, June 5",
@@ -42,7 +37,7 @@
           "oral_position": null,
           "day": "Sunday, June 7",
           "is_award_candidate": false,
-          "is_highlight": false,
+          "is_highlight": true,
           "rating": 3
         },
         {
@@ -62,7 +57,7 @@
           "oral_position": null,
           "day": "Sunday, June 7",
           "is_award_candidate": false,
-          "is_highlight": false,
+          "is_highlight": true,
           "rating": 3
         },
         {
@@ -115,7 +110,7 @@
           "oral_position": null,
           "day": "Friday, June 5",
           "is_award_candidate": false,
-          "is_highlight": false,
+          "is_highlight": true,
           "rating": 3
         },
         {
@@ -132,7 +127,7 @@
             "Nicholas Jing Yuan",
             "Qi Zhang"
           ],
-          "session_id": "poster-1",
+          "session_id": "findings-friday",
           "poster_id": 61,
           "oral_position": null,
           "day": "Friday, June 5",
@@ -160,7 +155,7 @@
             "Klara Nahrstedt",
             "Mingyuan Wu"
           ],
-          "session_id": "poster-3",
+          "session_id": "findings-saturday",
           "poster_id": 6,
           "oral_position": null,
           "day": "Saturday, June 6",
@@ -177,7 +172,7 @@
             "Wei You",
             "Hao Chen"
           ],
-          "session_id": "poster-3",
+          "session_id": "findings-saturday",
           "poster_id": 7,
           "oral_position": null,
           "day": "Saturday, June 6",
@@ -361,14 +356,13 @@
         },
         {
           "key": "parallel-icl-vlm",
-          "title": "Parallel In-context Learning for Large Vision Language Models",
+          "title": "Parallel In-context Learning for Large Vision Language Models, Shin'ya Yamaguchi",
           "authors": [
-            "Shin'ya Yamaguchi",
             "Daiki Chijiwa",
             "Tamao Sakao",
             "Taku Hasegawa"
           ],
-          "session_id": "poster-3",
+          "session_id": "findings-saturday",
           "poster_id": 242,
           "oral_position": null,
           "day": "Saturday, June 6",
@@ -421,7 +415,7 @@
             "Bin Wang",
             "Conghui He"
           ],
-          "session_id": "poster-1",
+          "session_id": "findings-friday",
           "poster_id": 186,
           "oral_position": null,
           "day": "Friday, June 5",
@@ -732,6 +726,2894 @@
       "future_work": "—",
       "related_work": "ReAct, MM-ReAct, Visual ReAct, ARM-Thinker (本リスト #2)。",
       "note": "★★ 「観察 → 仮説 → 検証 → 結論」の流れは本人の framework (シミュレーション結果分析 → 次のアクション提案) の中核ループに直結する。arXiv 未公開のため詳細推測。"
+    },
+    "award-friday-a-style-is-worth-one-code-u": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2511.10555",
+      "one_line": "数値コード1つで画像スタイルを表現するCode-to-Style生成の枠組みを提示",
+      "problem": "従来のスタイル制御は長いテキストプロンプトや参照画像が必要で、再現性や一貫性に乏しい。本研究では数値コード単独で多様かつ一貫したスタイルを表現する新タスクを定義する。",
+      "contribution": "(1) Code-to-Style画像生成タスクの提案、(2) 離散スタイルコードブックを用いた最初のオープンソース手法CoTyle、(3) 新規スタイル埋め込みを生成する自己回帰スタイル生成器、(4) Qwen-Image版/Kolors商用版の公開。",
+      "idea": "画像集合から離散スタイル埋め込みコードブックを学習し、T2I拡散モデルの条件付けに用いる。さらに離散スタイル埋め込みの分布を自己回帰モデルで学習し、推論時に数値コードを一意のスタイル埋め込みにマッピングすることで新規スタイルを合成。",
+      "key_figures": "コード→埋め込み→拡散モデルというパイプライン図、数値コードを変えることで多様なスタイルを生成できるグリッド図が代表的。",
+      "evaluation": "T2I拡散ベースで広範な実験を実施。数値コードがスタイル制御子として機能することを検証し、ベースラインに対して質的・量的に優位を示す。",
+      "future_work": "より大規模なスタイルコードブックの拡張、動画や3Dへの応用が想定される。",
+      "related_work": "テキスト-画像拡散モデル (Stable Diffusion等)、参照画像ベースのスタイル転送 (StyleAlign, IP-Adapter)、離散表現学習 (VQ-VAE)。",
+      "note": "CVPR 2026 Oral採択。Kwai-KolorsのGitHub・HuggingFaceで実装公開。"
+    },
+    "award-friday-adversarial-style-optimizat": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "GRPOによる文体トリガー最適化でVLMの安全性突破を行う新型ジェイルブレイク",
+      "problem": "視覚言語モデル(VLM)のジェイルブレイク研究は画像の摂動や離散的なテキストトリガー探索が中心で、自然な発話スタイルを介した攻撃の体系的探索は未開拓。",
+      "contribution": "(1) 視覚言語モデルに対するスタイル指向のジェイルブレイク枠組みを提示、(2) GRPO(Group Relative Policy Optimization)を用いた文体トリガー最適化アルゴリズム、(3) 複数の主要VLMでの転移性検証、(4) 既存防御手法に対する頑健性評価。",
+      "idea": "有害プロンプトを書き換える「文体」自体を最適化対象とし、グループ相対方策最適化により安全ガードを回避しつつ意味は保持する自然な変換を学習する。",
+      "key_figures": "プロンプトを各文体に変換した攻撃成功率の比較表、GRPO学習曲線、生成例。",
+      "evaluation": "GPT-4o, Claude等のクローズドVLMおよびオープンVLMで攻撃成功率(ASR)を測定し、従来のサフィックス型攻撃や単純な文体変換ベースラインを大幅に上回る性能を示す。",
+      "future_work": "防御側ではスタイル正規化や敵対的訓練、攻撃側ではマルチターン/マルチモーダル拡張が考えられる。",
+      "related_work": "Say It Differently (linguistic style jailbreak)、bi-GRPO、白箱VLM攻撃 (UMK)。",
+      "note": "arXiv上で本タイトル一致版を確認できず。タイトルとセッションから内容を推定。"
+    },
+    "award-friday-vit3-unlocking-test-time-tr": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.01643",
+      "one_line": "Attentionをオンライン学習として再定式化する線形複雑度のテスト時学習ViT",
+      "problem": "標準的なViTはAttentionの二次計算コストが課題。Mambaや線形Attentionなど代替モデルは効率は良いが精度で劣る。Test-Time Training(TTT)を視覚に効果的に適用する方法は未整理。",
+      "contribution": "(1) 視覚向けTTT設計の系統的経験的検証、(2) 設計指針となる6つの実践的洞察、(3) 純TTTアーキテクチャViT^3の提案、(4) 分類・生成・検出・分割の4タスクで一貫した性能を実証。",
+      "idea": "AttentionをKVペアからの内側モデルをテスト時にオンライン学習する問題として再定式化。線形計算量で並列実行可能なTTT機構を構築し、最適化される内側モデル設計を体系化。",
+      "key_figures": "TTTブロックのアーキテクチャ図、4タスクにわたるViT/Mamba/線形Attentionとの精度-計算量パレート図。",
+      "evaluation": "ImageNet分類、画像生成、COCO検出、ADE20Kセグメンテーションで実験。Mambaや線形Attentionと同等以上、最適化済みViTとのギャップも縮小。",
+      "future_work": "内側モデルの容量拡張、より複雑なオンライン最適化、ビデオ・大規模生成への応用。",
+      "related_work": "TTT/オンライン学習による系列モデル (Sun et al. 2024)、Mamba/SSM、線形Attention系。",
+      "note": "Tsinghua×Alibaba。CVPR 2026 Oral。"
+    },
+    "award-friday-black-box-membership-infere": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2501.06399",
+      "one_line": "事前学習済み画像生成モデルへの計算効率良いブラックボックスメンバーシップ推論",
+      "problem": "大規模画像生成モデル(Stable Diffusion等)が訓練に特定の画像を使ったかをモデル重みなしに判定したい。既存攻撃は計算高コストかホワイトボックスを前提。",
+      "contribution": "(1) GenAI Confessions: ブラックボックスかつ低コストなメンバーシップ推論攻撃、(2) 事前学習データに対する評価フレームワーク、(3) Stable Diffusion v2.1を100画像でファインチューニングしたケースで高精度判定、(4) 既存手法を上回るAUC。",
+      "idea": "モデル出力の統計量(尤度近似や生成多様性の偏り)を用い、訓練画像セットへの過適合シグナルを集約して判定。アーキテクチャや重み情報を一切要しない。",
+      "key_figures": "MIAパイプライン図、AUC-ROC曲線、ファインチューニング設定での識別性能の図。",
+      "evaluation": "Stable Diffusion v2.1を事前学習データ・FT 100画像で評価。AUC高値を達成し、既存ブラックボックスMIAを上回る。",
+      "future_work": "テキスト・動画生成モデルへの拡張、防御メカニズムの開発。",
+      "related_work": "Black-box MIA on Fine-tuned Diffusion (Pang+ 2023), Noise as a Probe MIA, Pretraining MIA for Diffusion (Dubinski+)。",
+      "note": "事前学習データ漏洩監査の文脈。"
+    },
+    "award-friday-data-leakage-detection-and": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2304.02296",
+      "one_line": "知覚ハッシュで大規模地理空間データセットの重複・データ漏洩を効率検出",
+      "problem": "建物フットプリント抽出など地理空間タスクの主要データセット(INRIA, SpaceNet 2, AICrowd)で訓練/検証の漏洩や重複が懸念されるが、大規模ゆえに検証が困難。",
+      "contribution": "(1) 知覚ハッシュ+検索ベースのデータ検証パイプライン、(2) 3大データセットの徹底分析、(3) AICrowdの約89%が重複・93%の検証画像が訓練に含まれることを発見、(4) 修正済みクリーンスプリットの提供。",
+      "idea": "知覚ハッシュ(pHash等)で類似画像を高速にバケット化し、回転・拡張変形を含む準同一画像も検出。スプリット間の漏洩を効率的に列挙して可視化。",
+      "key_figures": "重複検出パイプライン図、各データセットの重複率/漏洩率の棒グラフ、検出された重複画像の典型例。",
+      "evaluation": "INRIA, SpaceNet 2, AICrowd Mapping Challenge(~280k枚)で評価。AICrowdは89%が重複、93%の検証が訓練に含まれ、ベンチマークとして不適切と結論。",
+      "future_work": "より多様な地理空間データセットへの展開、ハッシュ手法の頑健化、自動再分割の標準化。",
+      "related_work": "知覚ハッシュ(pHash, dHash)、CIFAR/ImageNetの重複検出(Birodkar+)、CrowdAI Mapping Challenge論文。",
+      "note": "Poullis研究室。コードはGitHubで公開。"
+    },
+    "award-friday-ldp-slicing-local-different": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2603.03711",
+      "one_line": "ビットプレーン分割でLDPを画像に実用化する訓練不要の局所差分プライバシ手法",
+      "problem": "局所差分プライバシ(LDP)は理想的だが、画像の高次元ピクセル空間に直接適用すると有用性が大きく劣化し、画像LDPは実用的でないとされてきた。",
+      "contribution": "(1) ピクセルでなくビットプレーンへLDPを適用する新しいパラダイム、(2) 訓練不要・軽量なLDP-Slicingフレームワーク、(3) 知覚的難読化モジュールとプライバシ予算最適配分、(4) 顔認識・画像分類で既存DP/LDPを上回る有用性。",
+      "idea": "ピクセル値を二値ビットプレーン系列に分解し、ビット単位でLDPメカニズムを適用。低次元化により雑音影響を最小化する。さらに知覚難読化と予算最適化で人間可視漏洩を抑制。",
+      "key_figures": "ビットプレーン分解→LDPノイズ→再構成パイプライン図、プライバシ予算ε vs 精度の比較曲線。",
+      "evaluation": "顔認識(LFW等)、画像分類(CIFAR/ImageNet系)で同等プライバシ予算下の既存DP/LDPベースラインを上回る精度を達成。計算オーバーヘッドも僅少。",
+      "future_work": "ビデオ・3Dデータへの拡張、より厳密な人間可視性評価、適応的ビット配分。",
+      "related_work": "LDP-Feat (2023), Local DP for Deep Learning (Arachchige+ 2019), 古典的画像DP手法。",
+      "note": "訓練不要であり広範な応用が期待される。"
+    },
+    "award-friday-revisiting-geometric-obfusc": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "双収束直線による幾何難読化を再考しプライバシ保存姿勢推定を実現",
+      "problem": "プライバシ保存姿勢推定では特徴点を3D線などで難読化する手法があるが、近年攻撃により復元可能性が示されている。難読化と精度のトレードオフを根本的に見直す必要がある。",
+      "contribution": "(1) 既存線ベース幾何難読化の脆弱性分析、(2) Dual Convergent Lines (DCL) による新しい幾何難読化表現、(3) DCLからの姿勢推定アルゴリズム、(4) 攻撃耐性と精度を両立する評価。",
+      "idea": "特徴点を1本の線でなく、特定点で収束する2本の直線(双収束直線)で隠す。これにより元の点位置の自由度を増やし、攻撃が一意に復元することを困難にする。",
+      "key_figures": "DCLの幾何表現図、点復元攻撃の比較図、姿勢推定精度の比較表。",
+      "evaluation": "公開ローカリゼーションデータセット(7-Scenes, Cambridge Landmarks等)で姿勢推定精度と既存攻撃に対する復元耐性を評価。先行手法より高プライバシかつ同等以上の精度を実現。",
+      "future_work": "理論的なプライバシ保証の導出、より複雑な攻撃モデルへの対応、動的シーンへの拡張。",
+      "related_work": "Speciale et al. のLine Cloud手法、Geiger+の攻撃、Privacy Preserving SfM。",
+      "note": "arXiv未確認。タイトルとセッションから内容を推定。"
+    },
+    "award-friday-nuwa-deriving-lightweight-c": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2504.03118",
+      "one_line": "エッジ向けにタスク特化型小型ViTをベースViTから自動派生するNuWa",
+      "problem": "事前学習済みViTは汎用知識を持つが、エッジデバイスでは特定タスクしか必要としないため過剰スペック。エッジの計算・遅延制約下で精度を最大化する小型ViT派生が課題。",
+      "contribution": "(1) ベースViTからタスク特化型小型ViTを派生するNuWaフレームワーク、(2) タスク固有知識転移機構、(3) 推論遅延保証付きの構造探索、(4) 3つのベースViT×3データセットで精度11.83%向上、推論1.29-2.79×高速化。",
+      "idea": "ベースViTからタスク固有の重要知識を抽出して小型ViTへ転移。リソース制約下で精度最大化となる構造を選択することで、過剰スペックを除き精度向上と高速化を両立する。",
+      "key_figures": "NuWa派生パイプライン図、ベースViT→小型ViTの構造比較、精度-遅延トレードオフ図。",
+      "evaluation": "3種のベースViT(DeiT等)を3公開データセットで評価。SOTA比で精度+11.83%、推論速度1.29-2.79×を達成。",
+      "future_work": "より多様なエッジハードウェア(NPU等)への適応、動的タスク切替、量子化との統合。",
+      "related_work": "EdgeViTs (Pan+ 2022)、知識蒸留(Hinton, DeiT distillation)、NAS。",
+      "note": "クラス特化ViTのエッジ展開を扱うが、論文タイトルでは「Task-Specific」表記。"
+    },
+    "award-friday-plant-taxonomy-meets-plant": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2603.21229",
+      "one_line": "リンネ分類体系に基づく268種・67万点の細粒度植物計数データセット",
+      "problem": "既存の物体計数(CAC)は粗いカテゴリにとどまり、植物の分類学的構造を活かした細粒度計数のベンチマークが存在しない。観測スケールも統一されていない。",
+      "contribution": "(1) 植物計数ベンチマークTPC-268の構築、(2) インスタンス単位の点アノテーション67.8万点、(3) リンネ分類(界→種)と器官カテゴリの階層ラベル、(4) リモートセンシングから顕微鏡まで多スケール、(5) 既存CAC手法のベンチマーク。",
+      "idea": "植物の階層的分類学を計数に持ち込むことで、種・器官の階層推論と細粒度評価を可能にする。Plantae・Fungiから242種268カテゴリ・10,000画像を収集し、分類整合的かつスケール整合的なスプリットを設計。",
+      "key_figures": "10,000画像のサンプルグリッド、分類ツリーと種別画像数の分布図、CAC手法のベンチマーク表。",
+      "evaluation": "回帰系・検出系のSOTA CAC手法を再評価。多スケール・細粒度設定で既存手法の限界を可視化。MAE/MSEで比較。",
+      "future_work": "より広範な分類群への拡張、半教師あり/能動学習、生態モニタリング応用。",
+      "related_work": "FSC-147, BMNet+, CountTR等のCAC、iNat21等の細粒度認識。",
+      "note": "CVPR 2026 Oral。データセットはHuggingFace/Google Driveで公開。"
+    },
+    "award-friday-rethinking-dataset-distilla": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2604.18811",
+      "one_line": "ソフトラベル使用下では従来のデータセット蒸留はランダム選択と同等と暴露",
+      "problem": "大規模データセット蒸留(DD)はSOTAを主張するが、評価設定がソフトラベルに依存。コアセット文献では高品質コアセットがランダム選択を上回るのと対照的に、DDの優位性が真にデータ品質によるものか不明瞭。",
+      "contribution": "(1) DDの代表手法(SRe2L等)が実はランダム画像ベースラインと同等であることを実証、(2) ハード・ソフトラベル下でのスケーリング解析、(3) コアセット手法もソフトラベル下では優位性を失うことを示す、(4) DDの再評価指針を提供。",
+      "idea": "下流訓練時のラベル供給(豊富なソフト/固定ソフト/ハード)を分離して評価することで、DDの「成功」が手法のデータ品質ではなくソフトラベルからの知識蒸留に由来していたことを暴く。",
+      "key_figures": "ラベル設定別の蒸留vsランダム性能曲線、スケーリング解析の図、各手法のサンプル可視化。",
+      "evaluation": "ImageNet系の大規模設定で、SRe2Lなどの代表的蒸留手法とランダムベースラインを多様なラベル供給設定で比較。ソフトラベル下では同等、ハードラベル下でのみ差が顕在化。",
+      "future_work": "ラベル使用前提を明示した新しいDDベンチマーク、ラベル無関連な品質評価指標の確立。",
+      "related_work": "SRe2L (Yin+ 2023), MTT (Cazenavette+), Coreset selection。",
+      "note": "DD研究コミュニティへ強い警鐘を鳴らす論文。"
+    },
+    "award-friday-customized-fusion-a-closed": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2604.08924",
+      "one_line": "下流タスクの意味要求に応じて構造を動的調整する閉ループ赤外可視融合",
+      "problem": "赤外可視画像融合は検出・分割など下流タスクごとに要求が異なるが、既存手法は固定アーキテクチャで再学習なしのタスク適応が困難。",
+      "contribution": "(1) 閉ループ動的ネットワーク(CLDyN)の提案、(2) Requirement-driven Semantic Compensation (RSC) モジュール、(3) Basis Vector BankとArchitecture-Adaptive Semantic Injectionブロック、(4) 再学習なしのタスク特化融合を実現。",
+      "idea": "下流タスクの意味要求を閉ループでフィードバックし、Basis Vector Bankからアーキテクチャ要素を選択して融合ネットワーク構造を動的に再構成する。これにより一つのモデルで多タスクへ適応。",
+      "key_figures": "閉ループ最適化のフローチャート、RSCモジュール構造図、複数タスク下の融合結果比較。",
+      "evaluation": "M3FD, LLVIP等の赤外可視融合データセットおよび検出・分割の下流タスクで評価。既存融合手法を上回る視覚品質と下流性能を達成。",
+      "future_work": "より多様な下流タスク・モダリティへの拡張、リアルタイム動的調整。",
+      "related_work": "DDcGAN, U2Fusion, TarDAL, MetaFusion等の融合手法。",
+      "note": "CVPR 2026採択。"
+    },
+    "award-friday-dual-band-thermal-videograp": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2509.11334",
+      "one_line": "二バンド+時間情報で常温下の熱放射と反射を画素単位に分離",
+      "problem": "サーマルカメラの長波赤外は物体自身の放射と環境からの反射放射が混在し、特に常温(near-ambient)条件で両者が同程度の振幅となるため分離が困難。これは熱画像の物理的解釈を妨げる。",
+      "contribution": "(1) 二バンドサーマルビデオの画像形成モデル、(2) スペクトル比+時間スムーズ性を組み合わせた分離アルゴリズム、(3) 画素単位の放射率と時変温度の同時推定、(4) 実機による検証。",
+      "idea": "二バンド間の放射率比は未知だが時間的に一定、物体放射は緩やかに変化する一方で環境放射は速く変化する、という補完的キューを組み合わせ、画素ごとに放射率と物体・背景温度を分離推定。",
+      "key_figures": "二バンド画像形成モデル図、分離結果の時間系列、放射率マップと温度マップの可視化。",
+      "evaluation": "屋内外の常温シーンで二バンド熱動画を収録し、再構成された物体温度・放射率を熱電対による参照値と比較。既存単バンド/単時刻手法と比べ高精度に分離。",
+      "future_work": "より高度な反射モデル(BRDF)への拡張、能動光源との統合、応用タスク評価。",
+      "related_work": "Multi-spectral thermography、emissivity estimation、computational thermal imaging。",
+      "note": "計算撮像のセッションでの注目論文。"
+    },
+    "award-friday-metaspectra-a-compact-broad": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2603.09116",
+      "one_line": "可視全域でHDR/偏光と同時撮像できるコンパクトな広帯域メタサーフェスカメラ",
+      "problem": "従来のメタサーフェス撮像器は10-100nmの狭帯域に限られ、HDR・偏光など複数機能の同時取得や薄型化が課題。",
+      "contribution": "(1) ほぼ可視全域250nmで動作する広帯域メタサーフェスカメラMetaSpectra+、(2) スナップショットHDR+ハイパースペクトル、もしくは偏光+ハイパースペクトル、(3) メタ-屈折ハイブリッド構造による分散・露光・偏光の独立制御、(4) 最短光学長と高い復元精度を両立。",
+      "idea": "メタサーフェスと屈折レンズのハイブリッド光学系で入射光を複数チャネルに分割し、各チャネルの分散・露光時間・偏光をメタサーフェスで独立制御。1ショットでハイパースペクトル+HDR/偏光の同時取得を実現。",
+      "key_figures": "光学系の物理構造図、メタサーフェス設計と性能評価、実物画像からのハイパースペクトル/HDR再構成例。",
+      "evaluation": "標準ベンチマーク(CAVE等)で再構成精度を評価し、既存スナップショットハイパースペクトル法より高精度かつ短光学長を達成。プロトタイプ実機で検証。",
+      "future_work": "蛍光・ToFなど他機能との統合、可動部品レス化、機械学習復元の改善。",
+      "related_work": "MetaH2 (Liu+ 2025), 計算分光イメージング、メタ光学。",
+      "note": "光学設計と計算撮像の融合。CVPR 2026 Oral。"
+    },
+    "award-friday-towards-photorealistic-and": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2507.18060",
+      "one_line": "1ステップ拡散による物理整合かつ高速・高品位なBokehレンダリング",
+      "problem": "ニューラルBokeh生成は深度推定誤差に弱く、また従来の拡散ベース手法は多ステップで実用性に欠ける。物理的整合性と効率性の両立が必要。",
+      "contribution": "(1) 1ステップ推論で動作する拡散Bokeh生成BokehDiff、(2) 像形成過程に整合する物理触発の自己注意モジュール、(3) 深度依存の錯乱円制約と自己遮蔽効果のモデル化、(4) 深度推定誤差に頑健な高品質Bokeh合成。",
+      "idea": "Bokeh像形成の物理モデル(深度・絞り・錯乱円・自己遮蔽)を自己注意に組み込み、1ステップ拡散として動作する蒸留型生成器を構築。これにより従来多段拡散の品質を保ったまま大幅に高速化。",
+      "key_figures": "BokehDiffのアーキテクチャ図、深度誤差耐性比較、多ステップ拡散との品質-時間比較。",
+      "evaluation": "EBB!などBokehベンチマークで質的・量的評価(PSNR/LPIPS等)。1ステップで多段拡散同等以上、深度推定が失敗する領域でも頑健。",
+      "future_work": "動画Bokehへの拡張、可制御絞り形状、リアルタイム化。",
+      "related_work": "BokehFlow, Bokehlicious, Any-to-Bokeh, GBSD。",
+      "note": "拡散1ステップ蒸留が鍵。"
+    },
+    "award-friday-unreflectanything-rgb-only": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.09583",
+      "one_line": "合成スペキュラ生成で教師信号を作り単一RGB画像のハイライトを除去",
+      "problem": "鏡面ハイライト除去は対画像の教師信号が稀少で、内視鏡・自然画像など多様な領域で汎化する手法が乏しい。",
+      "contribution": "(1) 単一RGB画像からのハイライト除去フレームワークUnReflectAnything、(2) 物理整合な人工スペキュラ合成パイプライン(Virtual Highlight Synthesis)、(3) 凍結ViTエンコーダ+トークン単位インペイント、(4) 自然・外科領域への汎化。",
+      "idea": "単眼幾何推定とFresnelシェーディングを用いて任意のRGB画像に物理的に妥当なスペキュラを合成し疑似ペアデータを構築。凍結ViT特徴をトークン単位で修復してから拡散画像を生成し、ハイライトマップも同時予測。",
+      "key_figures": "Virtual Highlight Synthesisの合成例、トークンインペイント機構の図、自然・内視鏡領域の除去結果。",
+      "evaluation": "SHIQ等の標準ベンチマークと外科データセットで評価。PSNR/SSIM/LPIPSで既存SOTAと競合。教師ペア不要で汎化性高い。",
+      "future_work": "動画ハイライト除去、より複雑なBRDF対応、リアルタイム化。",
+      "related_work": "SHIQ, JSHDR, RPCA-based methods, intrinsic decomposition。",
+      "note": "正式タイトルは『Rendering Synthetic Specular Supervision』。プロジェクトページ公開。"
+    },
+    "award-friday-mamma-markerless-accurate-m": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2506.13040",
+      "one_line": "高密度な接触認識ランドマークで二人インタラクションをマーカレス計測",
+      "problem": "マーカ式モーションキャプチャは精度が高いが手動マーカ配置や後処理が必要。マーカレス多人数キャプチャは強い遮蔽下で個人別対応が困難。",
+      "contribution": "(1) マーカレス多人数モーション取得パイプラインMAMMA、(2) セグメンテーションマスク条件付きの接触認識2D高密度ランドマーク予測、(3) 多視点ビデオからのSMPL-X推定、(4) 評価ベンチマークMAMMAEval-Singles/Danceの提供。",
+      "idea": "セグメンテーションマスクで個人を区別したうえで高密度な接触認識ランドマークを予測し、強い遮蔽下でも人別の対応関係を確立。多視点からSMPL-Xパラメータを高精度に最適化する。",
+      "key_figures": "MAMMAパイプライン図、高密度ランドマーク予測の可視化、商用マーカ式との比較。",
+      "evaluation": "MAMMAEval-Singles(3名×22シーケンス)とMAMMAEval-Dance(West Coast Swing 17シーケンス)で評価。商用マーカ式システムに匹敵する再構成品質を手動クリーンアップなしで達成。",
+      "future_work": "より多人数・複雑な接触、リアルタイム化、ハンド・フェイスのさらなる精度向上。",
+      "related_work": "BUDDI, Hi4D, multi-view SMPL-X fitting (BEHAVE)、dense landmark prediction。",
+      "note": "Max Planck × CMU。CVPR 2026 Oral。"
+    },
+    "award-friday-natural-human-motion-recove": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "高次時間ダイナミクスの整合で単眼動画から自然な人体動作を復元",
+      "problem": "単眼動画からの人体動作復元は、見かけは整合するが、加速度・躍度などの高次運動が不自然になる問題が残る。これにより動作の自然さと物理妥当性が損なわれる。",
+      "contribution": "(1) 高次時間ダイナミクス(速度・加速度・躍度)を明示的に整合させる学習目的、(2) 単眼動画向けの時系列モジュール、(3) 既存単眼HMRバックボーンへ容易に組み込めるプラグイン設計、(4) 標準ベンチマークでSOTAを更新。",
+      "idea": "予測モーションと参照モーションの高次時間微分を周波数領域や時間領域で整合させることで、見かけのフィットだけでなくダイナミクスの自然さを学習。MoCap優先度のスケジュールにより自然動作を導く。",
+      "key_figures": "高次ダイナミクス整合損失の概念図、加速度プロファイル比較、再構成動作の可視化。",
+      "evaluation": "3DPW, AMASS, EMDB等の標準データセットでMPJPE/PA-MPJPE/Acceleration Errorを評価。加速度誤差を大幅に削減し、SOTAと比較して自然さで優位。",
+      "future_work": "物理シミュレーションとの統合、長時間動作、複数人間相互作用への拡張。",
+      "related_work": "VIBE, TCMR, HuMoR, GLAMR、加速度損失系の先行研究。",
+      "note": "arXiv上で本タイトル一致版は未確認。タイトルとセッションから内容を推定。"
+    },
+    "award-friday-sam-3d-body-robust-full-bod": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2602.15989",
+      "one_line": "プロンプト可能で頑健な単一画像フルボディ人体メッシュ復元基盤モデル",
+      "problem": "単一画像からの人体メッシュ復元はin-the-wildの多様条件・遮蔽・服装で性能が劣化。手・足を含むフルボディかつプロンプト制御可能な基盤モデルが欠如。",
+      "contribution": "(1) 単一画像フルボディHMR基盤モデルSAM 3D Body(3DB)、(2) 骨格と表面形状を分離する新パラメトリックMomentum Human Rig(MHR)、(3) 2Dキーポイント/マスクをプロンプトとして受け取るエンコーダ-デコーダ、(4) 多段アノテーションパイプラインと多様in-the-wildデータ収集エンジン。",
+      "idea": "MHRで体幹と表面形状を分離し、SAM系のプロンプト可能な汎用設計を3D人体に持ち込む。多段(手動キーポイント+多視点幾何+微分可能最適化+高密度キーポイント)パイプラインで高品質ラベルを大規模生成。",
+      "key_figures": "3DBアーキテクチャ図、MHRパラメトリック表現、データエンジンの図、in-the-wild結果のグリッド。",
+      "evaluation": "3DPW, EMDB, AGORA, EHFなど複数の標準ベンチマークでSOTAを更新。プロンプトによる対話的精度向上も検証。",
+      "future_work": "高速化(Fast SAM 3D Body)、動画拡張、顔のさらなる精度、装着物への対応。",
+      "related_work": "SMPL-X, HMR2.0, OSX, PIXIE, SAMファミリ。",
+      "note": "Meta Superintelligence Labs。コード・重み・デモ公開。"
+    },
+    "award-friday-sam-3d-3dfy-anything-in-ima": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2511.16624",
+      "one_line": "単一画像から物体の形状・テクスチャ・レイアウトを生成的に復元するSAM 3D",
+      "problem": "in-the-wild単一画像からの3D物体復元は、遮蔽・乱雑シーン・文脈依存の認識が必要だが、対応する大規模3D教師データが乏しい。",
+      "contribution": "(1) 単一自然画像から3D形状・テクスチャ・配置を生成するSAM 3D、(2) 人間とモデルのループ型アノテーションによる前例ない規模の視覚接地3Dデータ、(3) 合成事前学習+実画像アライメントの多段訓練、(4) 既存手法に対し人間嗜好で5:1以上の勝率。",
+      "idea": "視覚に接地した3D再構成データを人とモデルのループで効率収集し、合成事前学習で形状の事前知識を獲得後、実世界画像へのアライメントで遮蔽・文脈下の汎化を獲得。生成的多モーダル予測で形状・テクスチャ・配置を統一推論。",
+      "key_figures": "SAM 3Dアーキテクチャ図、データエンジン図、多様in-the-wild画像からの3D復元結果、勝率比較。",
+      "evaluation": "実世界の物体・シーンに対する人間嗜好評価で既存研究比5:1以上の勝率。新ベンチマークも提供。",
+      "future_work": "より細粒度なテクスチャ・素材、動的シーン、シーン全体のレイアウト推論への拡張。",
+      "related_work": "TripoSR, LRM, Wonder3D, Zero123, SAMファミリ。",
+      "note": "Meta Superintelligence Labs。デモ・コード公開予定。"
+    },
+    "award-friday-3dreflecnet-a-large-scale-d": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "反射・透明・低テクスチャ物体に特化した大規模3D再構成データセット",
+      "problem": "鏡面・透明・低テクスチャ物体は従来の3D再構成で誤マッチング・誤幾何が頻発するが、これら困難物体に焦点を絞った大規模実データセットが存在しない。",
+      "contribution": "(1) 反射・透明・低テクスチャ物体の大規模3D再構成データセット3DReflecNet、(2) 高精度GT 3D形状とマルチビュー画像、(3) 既存手法のベンチマーク評価、(4) 困難物体での失敗分析。",
+      "idea": "塗装スプレーや構造化光など補助計測でGT形状を取得しつつ、補助なしの通常RGBビューを提供。これにより困難物体に対するMVS/NeRF/3DGSの公平評価を可能にする。",
+      "key_figures": "データセットの代表サンプル、カテゴリ別分布、SOTAベースラインのChamfer誤差比較。",
+      "evaluation": "MVS, NeRF, 3DGS系の代表手法をChamfer/F-score/正規線誤差で評価。鏡面・透明物体で既存手法の限界を定量的に明らかに。",
+      "future_work": "より大規模化、屋外シーン、動的物体への拡張、新規ベースラインの開発。",
+      "related_work": "3DRef (Wei+ 2024), Through the Looking Glass, NeRF Studio benchmarks。",
+      "note": "arXiv上で正確に一致するタイトルを未確認。内容はタイトル・セッションから推定。"
+    },
+    "award-friday-glint-modeling-scene-scale": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2603.26181",
+      "one_line": "Gaussian放射伝搬で建物窓ガラスなどシーン規模の透明性をモデル化",
+      "problem": "3D Gaussian Splatting(3DGS)はガラス窓のような透明インターフェースの反射光と透過光を分離できず、シーン規模の透明性表現に失敗する。",
+      "contribution": "(1) シーン規模透明性を扱うGLINTフレームワーク、(2) 主インターフェースを明示分離する分解型Gaussian表現、(3) 反射と透過の放射成分を別個にモデル化し放射伝搬を一貫扱う、(4) 透明シーンでのSOTA再構成。",
+      "idea": "透明面を主インターフェースとしてGaussianに分離し、その後ろの透過幾何と反射成分の放射を別々に推定。物理的に整合する放射伝搬モデルにより、ガラス越しの背景と反射の両方を高品位に再構成。",
+      "key_figures": "Gaussian分解と放射伝搬の概念図、ガラス窓越しの再構成結果、ベースライン比較。",
+      "evaluation": "ガラス窓を含む実シーンと合成シーンで評価。PSNR/SSIM/LPIPSで3DGSや透明性対応ベースラインを上回り、反射/透過の分離も妥当。",
+      "future_work": "より高次の屈折モデル、動的透明体、リアルタイム最適化への拡張。",
+      "related_work": "3DGS (Kerbl+ 2023), NeRF for reflections, refractive NeRF。",
+      "note": "KAIST×NAVER LABS。CVPR 2026 Oral。"
+    },
+    "award-friday-phygap-physically-grounded": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2603.14001",
+      "one_line": "偏光手掛かりで反射を物理的に分離し再照明可能なGaussian Splatting",
+      "problem": "3D Gaussian Splattingは鏡面反射と素材推定が苦手で、得られたモデルは物理的に正しい再照明ができない。光沢物体の素材・幾何・環境光の分離は不良設定問題。",
+      "contribution": "(1) 物理接地Gaussian Splatting PhyGaP、(2) 外観・形状・屈折率・粗さ・環境マップの同時推定、(3) Stokesベクトルを画素毎に計算する偏光遅延レンダリング(PolarDR)、(4) 偏光BRDF(pBRDF)モデルによる直接最適化。",
+      "idea": "通常のRGBに加えて偏光情報をGaussian表現の最適化シグナルとして導入し、pBRDFに基づく偏光遅延レンダリングで反射成分を物理的に分離。完全/部分偏光情報のいずれでも対応可能。",
+      "key_figures": "PhyGaPパイプライン図、Stokes計算と偏光BRDFの図、再照明結果と素材分離可視化。",
+      "evaluation": "光沢物体を含むデータセットで評価。新規視点合成・再照明・反射分離でベースラインを上回り、物理的整合性を確保。",
+      "future_work": "より複雑な多層BRDF、屋外照明、動的シーンへの拡張。",
+      "related_work": "PolGS++ (2026), PhysGaussian, 3DGS, polarization-based inverse rendering。",
+      "note": "偏光×3DGS。CVPR 2026 Oral。"
+    },
+    "award-friday-seegroup-multi-layer-depth": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "自己決定グループ化で透明面の多層深度を推定するSeeGroup",
+      "problem": "透明物体は表面と背後の物体の双方の深度が重要だが、既存手法は単層深度を予測するか、層数を事前指定する必要がある。実シーンでは層数が未知。",
+      "contribution": "(1) 自己決定グループ化に基づく透明面多層深度推定SeeGroup、(2) 層数を自動決定するメカニズム、(3) 多層深度の対応データセット/ベンチマーク、(4) SOTA透明深度推定。",
+      "idea": "画素を自己決定的に「層」へ動的にクラスタリングし、各クラスタごとに別々の深度を推定。これにより層数を事前指定せずに、透明面と背後の幾何を同時に取得。",
+      "key_figures": "自己決定グループ化の概念図、多層深度推定パイプライン、ガラス越しシーンの再構成結果。",
+      "evaluation": "LayeredDepthや透明物体ベンチマークで多層深度のRMSE/MAEを評価。既存単層手法・固定層手法を上回り、層数が変動するシーンでも頑健。",
+      "future_work": "屋外大規模シーンへの拡張、動的透明体、リアルタイム化。",
+      "related_work": "LayeredDepth (Zhang+ 2025), SeeClear, DepthFocus, TransLab。",
+      "note": "arXiv上でタイトル一致版を未確認。LayeredDepth関連の系譜。"
+    },
+    "award-friday-proxy-gs-unified-occlusion": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2509.24421",
+      "one_line": "Proxyメッシュで遮蔽事前情報を統合し構造化3DGSを高速化",
+      "problem": "構造化3D Gaussian Splatting(Scaffold-GS等)は遮蔽認識が欠如し、見えないアンカーまで処理するため冗長。VR/ARで実用性を損なう。",
+      "contribution": "(1) Proxyメッシュを介して遮蔽情報を統合するProxy-GS、(2) ハードウェアラスタライザとPyTorch proxy renderの橋渡し、(3) 1000x1000解像度を1ms以下で生成する高速プロキシシステム、(4) 遮蔽アンカーの効率カリングと密化、(5) 最大2.5×高速化。",
+      "idea": "軽量プロキシメッシュで各視点の遮蔽深度マップを高速生成し、遮蔽されたアンカーを訓練・推論時にカリング。プロキシガイド密化で幾何事前情報を構造化的に活用。",
+      "key_figures": "Proxy-GSのパイプライン図、遮蔽カリングの可視化、速度-品質トレードオフ図。",
+      "evaluation": "Mip-NeRF360, Tanks&Templesなどで評価。遮蔽の多いシーンで最大2.5×高速化し、品質はSOTAと同等以上。",
+      "future_work": "動的シーン、より複雑な構造化Gaussian、ストリーミング応用。",
+      "related_work": "Scaffold-GS, Octree-GS, 3DGS (Kerbl+ 2023)。",
+      "note": "MLPベース3DGSの実用化を加速。"
+    },
+    "award-friday-efficiently-reconstructing": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.08924",
+      "one_line": "クエリ機構で深度・対応・カメラを同時推論する超高速動的シーン再構成",
+      "problem": "動画からの動的シーン4D再構成は、深度・時空対応・カメラ姿勢を別タスクで重い推論を繰り返す必要があり、計算コストが高く速度がボトルネック。",
+      "contribution": "(1) フィードフォワード型動的シーン再構成D4RT、(2) タスク特化デコーダ不要な統一トランスフォーマー、(3) 任意の時空点を独立に問い合わせる新クエリ機構、(4) 200+FPSの姿勢推定でVGGTより9×、MegaSaMより100×高速かつ高精度。",
+      "idea": "高負荷な密な毎フレームデコーディングを避け、空間と時間の任意点を独立にプロービングできるクエリ機構を導入。深度・対応・カメラを単一トランスフォーマーから取り出すことで、軽量かつ高度にスケーラブル化。",
+      "key_figures": "D4RTのアーキテクチャ図、クエリ機構の概念図、速度-精度比較曲線(VGGT/MegaSaM等)。",
+      "evaluation": "動的シーン4D再構成ベンチマークで姿勢・深度・対応のSOTAを更新。200+FPS、VGGT比9×、MegaSaM比100×高速。",
+      "future_work": "長時間動画、極大規模シーン、より複雑な多人数動作への拡張。",
+      "related_work": "VGGT, MegaSaM, MonST3R, DUSt3R系。",
+      "note": "Google系の研究。プロジェクトページ公開。"
+    },
+    "award-friday-fuser-feed-forward-multivie": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.09373",
+      "one_line": "全スキャン統合潜在空間で多視点登録するTransformerとSE(3)^N拡散精細化",
+      "problem": "多視点点群登録は通常ペアワイズ推定+グラフ最適化に依存し、計算コストが高くペア誤差の累積に弱い。フィードフォワードで一気通貫に解く手法が望まれる。",
+      "contribution": "(1) 全スキャンを統一潜在空間で扱う初のフィードフォワード多視点登録TransformerであるFUSER、(2) Geometric Alternating Attentionによる効率的なスキャン内/間推論、(3) 2D基盤モデルからの注意事前知識転移、(4) SE(3)^N拡散精細化FUSER-DFと事前条件付き変分下界。",
+      "idea": "各スキャンを並進キュー保持のスーパーポイント特徴に符号化し、全スキャンを共有潜在空間で同時推論してグローバル姿勢を直接予測。さらにFUSER自身を代理モデルとしたSE(3)^N拡散デノイザで精細化。",
+      "key_figures": "FUSER全体アーキテクチャ、Geometric Alternating Attention図、SE(3)^N拡散デノイズの概念図、精度比較表。",
+      "evaluation": "3DMatch, ScanNet, ArkitScenesで多視点登録の精度・効率を評価。ペアワイズ系SOTAを上回り、計算効率でも優位。",
+      "future_work": "屋外大規模点群、動的シーン、SLAMとの統合。",
+      "related_work": "DUSt3R, MASt3R, Learning multiview registration (Gojcic+ 2020), SE(3) diffusion。",
+      "note": "コード公開。"
+    },
+    "award-friday-residual-primitive-fitting": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.09201",
+      "one_line": "SuperFrusta原始形状の残差適合で3D形状を編集可能な解析的集合に分解",
+      "problem": "3D形状を編集可能な解析的プリミティブ集合へ分解する研究はCAD/モデリングで有用だが、表現力・編集容易性・最適化容易性を兼ね備える原始形状が乏しい。",
+      "contribution": "(1) 円筒・球・円錐・先細り・曲がり形状を統一表現する8パラメータのSuperFrustum、(2) 反復残差適合アルゴリズムResFit、(3) ほぼ至る所で微分可能なSDF、(4) 花瓶・自転車・ロボット・カニなど多彩な形状で簡潔な分解を実証。",
+      "idea": "表現豊かで微分可能な統一プリミティブSuperFrustumを定義し、大域形状解析と局所最適化を交互に行い、残差形状に逐次的にプリミティブを適合させる教師なしResFitで形状分解を学ぶ。",
+      "key_figures": "SuperFrustumの形状バリエーション、ResFitの反復過程図、複雑形状の分解結果可視化。",
+      "evaluation": "ShapeNetや実形状で再構成品質と分解の解釈可能性を評価。既存プリミティブ分解(キュービット・スーパークアドリック系)より少数プリミティブで高精度再構成。",
+      "future_work": "テキストや画像からの直接プリミティブ生成、より複雑な曲面、CADへの直接出力。",
+      "related_work": "SuperQuadrics, Cuboid Abstraction (Tulsiani+ 2017), Marching Primitives, Neural Parts。",
+      "note": "Brown × Adobe Research。CVPR 2026 Oral。"
+    },
+    "award-friday-smokesvd-smoke-reconstruct": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2507.12156",
+      "one_line": "速度場制約付き拡散モデルで単一視点動画から煙を段階的に3D再構成",
+      "problem": "煙などの動的流体は単一視点動画では3D情報が圧倒的に不足し、新規視点合成・密度場推定が困難。ボリュメトリック再構成は多視点同期撮影が前提となる。",
+      "contribution": "(1) 単一視点動画からの煙3D再構成SmokeSVD、(2) 速度場制約を組み込む物理ガイド側面視合成器、(3) 拡散モデルによる新規視点段階生成と密度場の交互最適化、(4) 多視点シーケンスの高品質生成。",
+      "idea": "拡散モデルに流体の速度場制約を陽に与えることで、時空整合な側面視点画像を逐次生成。生成画像でNeRF/密度場を最適化、最適化結果から次視点を生成、を多段で繰り返す進行的フレームワーク。",
+      "key_figures": "SmokeSVDの段階的再構成パイプライン、速度場制約の概念図、単一視点入力に対する新規視点合成結果。",
+      "evaluation": "合成および実煙シーンで3D密度再構成精度と新規視点品質をPSNR/LPIPSで評価。単一視点入力にもかかわらず多視点ベースラインに近い品質を達成。",
+      "future_work": "他の流体(炎・水)、リアルタイム化、より複雑なソース推定。",
+      "related_work": "Neural Volumetric Reconstruction of Fluids (Chu+ 2022), GlobalFlowNet, video diffusion modelsy。",
+      "note": "拡散の生成能力で多視点不足を補う典型例。"
+    },
+    "award-friday-sparseworld-tc-trajectory": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2511.22039",
+      "one_line": "BEV非依存のスパース占有表現とTransformerで軌道条件付き未来予測",
+      "problem": "自動運転の占有予測ではVAEの離散トークンに依存して表現容量が制限され、BEV射影の幾何事前情報も限界がある。長時間の高精度占有予測は未達。",
+      "contribution": "(1) 軌道条件付きスパース占有世界モデルSparseWorld-TC、(2) BEV射影を経ない多フレーム占有予測のend-to-end学習、(3) Transformerによる時空依存の効率的学習、(4) nuScenesで1-3秒占有予測SOTA。",
+      "idea": "BEV投影や離散トークン化に頼らず、生画像特徴から直接スパース占有を時空Transformerで予測。自車軌道を条件として与え、計画と整合する占有未来を生成。",
+      "key_figures": "SparseWorld-TCのアーキテクチャ図、BEV/離散トークン手法との設計比較、nuScenes占有予測の可視化。",
+      "evaluation": "nuScenesベンチマークで1-3秒先の占有予測IoU等を測定。BEV/VAEベースの先行手法をSOTA超え。",
+      "future_work": "より長時間予測、複数エージェント条件、視覚以外のモダリティ統合。",
+      "related_work": "OccWorld, DriveWorld, OccNet, BEV系世界モデル。",
+      "note": "コード公開。自動運転世界モデルの最前線。"
+    },
+    "award-saturday-pixeldit-pixel-diffusion-": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2511.20645",
+      "one_line": "Autoencoder を排し、Patch-level + Pixel-level の二段 DiT で pixel 空間の拡散モデルを end-to-end 学習する画像生成手法。",
+      "problem": "現代の拡散モデルは latent 空間に依存し、autoencoder の表現力で画質が頭打ちになる。Pixel 空間で直接拡散させると効率と細部表現の両立が難しく、これまで実用的な精度が得られていない。",
+      "contribution": "(1) Autoencoder 不要の単段 end-to-end pixel-space diffusion transformer PixelDiT を提案。(2) Patch-level DiT (大域意味) と pixel-level DiT (細部テクスチャ) の dual-level transformer アーキテクチャ。(3) ImageNet 256 で FID 1.61、ImageNet 512 で FID 1.81 と既存 pixel 生成モデルを大幅に上回る。(4) Text-to-image 1024×1024 にも拡張可能。",
+      "idea": "Pixel 空間に拡散過程を直接張ると次元が爆発するため、グローバル意味を捉える patch-level branch と局所テクスチャを担う pixel-level branch を組み合わせる。Latent 空間の情報損失を回避しつつ、効率的に学習可能な構造を実現。",
+      "key_figures": "Fig. 1 — dual-level (patch-level + pixel-level) DiT アーキテクチャ全体図。主要結果 — ImageNet 256/512 FID と既存 latent/pixel 拡散手法の比較。",
+      "evaluation": "ImageNet 256/512 で FID 1.61/1.81、pixel-space SOTA。Text-to-image 1024×1024 で事前学習し定性比較。",
+      "future_work": "—",
+      "related_work": "DiT, Stable Diffusion (latent diffusion), SiD/RIN (pixel-space diffusion), Simple Diffusion, JetFormer。",
+      "note": "★★★ Latent diffusion パラダイムを脱して pixel 空間に戻す試みとして象徴的。アーキテクチャ設計の単純さと結果の強さで Best Paper 候補に相応しい。"
+    },
+    "award-saturday-seacache-spectral-evoluti": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2602.18993",
+      "one_line": "拡散モデルのスペクトル進化 (低周波→高周波) を考慮したキャッシュフィルタで、訓練不要に推論を加速。",
+      "problem": "Diffusion model の caching 加速は raw feature の差分に基づくが、これは content と noise を分離できず、低周波構造が早期に、高周波詳細が後期に形成される spectral evolution を無視している。",
+      "contribution": "(1) Spectral-Evolution-Aware (SEA) フィルタを導出し、content 成分を保持しつつ noise を抑制。(2) SEA-filtered feature で redundancy を推定する dynamic な cache schedule。(3) 訓練不要かつ多種生成モデルに適用可能。(4) Latency-quality トレードオフで SOTA。",
+      "idea": "拡散過程に内在する周波数進化 (低周波が先、高周波が後) を spectral filter で陽に取り出し、その filtered representation で feature 再利用の判断を行う。これにより誤って再利用される高周波領域の劣化を回避。",
+      "key_figures": "Fig. 1 — Spectral evolution の可視化 (timestep ごとの周波数分布)。SEA filter 前後の feature 比較。Latency-FID トレードオフ曲線。",
+      "evaluation": "多様な visual 生成モデル (image/video diffusion) で baseline cache (DeepCache, TGate 等) を上回る latency-quality。",
+      "future_work": "—",
+      "related_work": "DeepCache, TGate, FORA, PAB (Pyramid Attention Broadcast), Δ-DiT。",
+      "note": "★★★ Diffusion acceleration の主流である caching に対し物理的 prior (周波数進化) を入れる発想。実装軽量で実用価値高い。"
+    },
+    "award-saturday-compose-a-unified-complet": {
+      "rating": 2,
+      "arxiv_url": null,
+      "one_line": "カテゴリレベル 6D pose 推定と物体形状補完を統一する CVPR 2026 oral フレームワーク (arXiv 未公開)。",
+      "problem": "カテゴリレベル物体姿勢推定は、観測が部分的・オクルージョンを含む場合に脆く、形状補完と姿勢推定を独立に行うと相互の不整合が生じる。両者を end-to-end 連結する統一手法が望ましい。",
+      "contribution": "(1) Completion (形状補完) と Pose 推定を統一する ComPose フレームワーク。(2) 部分観測下でロバストな category-level 6D pose 推定。(3) 形状補完が姿勢推定を、姿勢推定が補完を相互に補強する設計。",
+      "idea": "Completion と pose を別タスクと見なさず、共通の canonical 表現上で同時最適化する。形状の事前分布 (category 単位の shape prior) を活用し、観測欠損を埋めながら canonical frame での pose を回帰。",
+      "key_figures": "(arXiv未公開) Fig. 1 で completion-pose 統一パイプライン、Fig. 4 でオクルージョン下のロバスト性比較を想定。",
+      "evaluation": "NOCS REAL275, Wild6D 等の category-level pose ベンチで mAP / 5°5cm メトリック想定。",
+      "future_work": "—",
+      "related_work": "NOCS, FS-Net, GPV-Pose, SGPA, CATRE, IST-Net, UA-Pose。",
+      "note": "★★ arXiv 未公開 (CVPR 2026 Oral Paper ID 40391)。Saturday Oral Spatial Understanding セッション。"
+    },
+    "award-saturday-cosmo3d-open-world-prompt": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2603.01205",
+      "one_line": "LLM 誘導で canonical space を構築し、200 カテゴリ統一データで open-world 3D セマンティックパートセグメンテーションを実現。",
+      "problem": "Open-world promptable 3D semantic segmentation は入力 sensor 座標系で意味推論を行うため脆い。一方人間は機能的役割を canonical space で解釈し、心的回転で物体を canonical frame に揃えてからパートを認識する心理物理的証拠がある。",
+      "contribution": "(1) LLM 誘導で intra-/cross-category alignment を行い、200 カテゴリの canonical 統一データセットを構築。(2) Canonical map anchoring と canonical box calibration の dual-branch アーキテクチャ。(3) Pose 変動・対称性を canonical embedding に集約。(4) Open-world promptable 3D segmentation で新たな SOTA。",
+      "idea": "入力 pose 空間 → canonical embedding への変換を model 内部に組み込むことで、part 意味の安定性と転移性を獲得。LLM が category 間の機能的対応 (例: 椅子の脚 ↔ 机の脚) を誘導し、人手アノテーション無しで canonical 整列を生成。",
+      "key_figures": "Fig. 1 — Canonical 整列の概念図 (mental rotation との対応)。Dual-branch アーキテクチャ図。200 カテゴリ visual taxonomy。",
+      "evaluation": "PartNet-Ensemble, ShapeNetPart 等で open-vocabulary part segmentation を評価し SOTA。Cross-category transfer も検証。",
+      "future_work": "—",
+      "related_work": "PartSLIP, SAM3D, OpenScene, PointCLIPv2, OpenIns3D。",
+      "note": "★★★ LLM × 3D part 認識の組み合わせで canonical space を陽に扱う発想。CVPR Best Paper 候補に相応しい新規性。"
+    },
+    "award-saturday-geovis-geospatially-rewar": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.02715",
+      "one_line": "リモートセンシング画像の visual grounding を木構造探索で progressively に解く、reward-guided な MLLM フレームワーク。",
+      "problem": "リモートセンシングの visual grounding は (1) ターゲットが km スケールシーンで極小であり、(2) クエリが複雑な geospatial 関係を含むため、単段推論モデルでは脆く、汎用 grounding 手法の転用が困難。",
+      "contribution": "(1) Visual grounding を progressive な search-and-reasoning として再定式化する GeoViS。(2) Tree-structured な visual cue 系列でグローバル画像を能動的に探索。(3) Multimodal perception, spatial reasoning, reward-guided exploration の統合。(4) 5 つのリモセン grounding ベンチで SOTA。",
+      "idea": "単発で bbox を予測せず、画像を tree 探索しながら geospatial hypothesis を反復洗練する。Reward が grounding の中間状態を導き、極小ターゲットを holistic 認識を保ったまま検出可能にする。",
+      "key_figures": "Fig. 1 — Tree-structured visual search の概念図。Reward シグナルと探索パスの可視化。極小物体の段階的フォーカス例。",
+      "evaluation": "5 種のリモセン visual grounding ベンチ (DIOR-RSVG, OPT-RSVG など) で precision/IoU を既存 grounding/MLLM ベースより向上。",
+      "future_work": "—",
+      "related_work": "GeoGround, EarthGPT, RSGPT, SkyEyeGPT, GeoChat。",
+      "note": "★★★ Remote sensing × MLLM × RL/reward 探索の融合。VLM の active visual search 化として一般化価値も高い。"
+    },
+    "award-saturday-chordedit-one-step-low-en": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2602.19083",
+      "one_line": "Dynamic optimal transport で source/target 間の低エネルギー軌道を導き、1 ステップで高忠実度な訓練不要画像編集を実現。",
+      "problem": "訓練不要の画像エディタは少数ステップで動かすと高エネルギー軌道により物体歪み・非編集領域の不整合が生じる。Inversion 不要・1 ステップでの高品質編集は未解決。",
+      "contribution": "(1) Image editing を source/target 分布間の transport 問題として定式化。(2) Dynamic optimal transport から導く低エネルギー制御戦略 ChordEdit。(3) Model agnostic, training-free, inversion-free。(4) 0.38 秒で SOTA 効率を達成しつつ高 fidelity と意味整合性を維持。",
+      "idea": "編集を ODE 軌道の最小エネルギー輸送として扱う。Chord (弦) のように source と target を直線的に結ぶ最小作用パスを導出することで、1 ステップで歪み無く編集を完了。",
+      "key_figures": "Fig. 1 — Chord 状の低エネルギー軌道概念図。1 ステップ編集結果と多ステップ baseline の比較。",
+      "evaluation": "PIE-Bench 等の編集ベンチで CLIP score / structure preservation を多ステップ baseline と同等以上に達成、推論 0.38s。",
+      "future_work": "—",
+      "related_work": "Prompt-to-Prompt, MasaCtrl, InfEdit, PnP-Inversion, ReNoise。",
+      "note": "★★★ Optimal transport 理論を編集の高速化に直結させた点が美しい。Inversion 不要 & 1 ステップでの実用性も高い。"
+    },
+    "award-saturday-native-and-compact-struct": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.14692",
+      "one_line": "Omni-voxel 表現と Sparse Compression VAE で、複雑トポロジ・PBR 属性を含む 3D アセットを compact latent で生成する 4B flow-matching モデル。",
+      "problem": "既存 3D 生成表現 (mesh / TriPlane / SDF) は複雑トポロジ (open / non-manifold) や PBR 属性付きアセットを十分に扱えず、latent も非 compact で大規模生成モデル化が困難。",
+      "contribution": "(1) Geometry と appearance を同時に符号化し任意トポロジを扱える O-Voxel (omni-voxel) 表現。(2) 高空間圧縮率と compact latent を実現する Sparse Compression VAE。(3) 公開 3D データを用いた 4B flow-matching 生成モデル。(4) 効率的な推論で geometry / material 品質が既存を大幅に上回る。",
+      "idea": "Voxel を「open / non-manifold / 内包含」の任意トポロジに対応させ PBR 材質も格納する形に拡張し、その上にスパース圧縮 VAE を構築。Compact latent 上で flow-matching を学習することで、大規模 native 3D 生成を実用化。",
+      "key_figures": "Fig. 1 — O-Voxel 表現 (geometry + PBR) の概念図。Sparse Compression VAE のアーキテクチャ。生成された 3D アセット (複雑トポロジ + 材質) の品質比較。",
+      "evaluation": "Objaverse 等の公開 3D データで学習。生成品質を mesh / TriPlane / Trellis 系などの既存 native 3D 生成と比較し geometry/material で上回る。",
+      "future_work": "—",
+      "related_work": "TRELLIS, CLAY, Direct3D, Hunyuan3D, 3DShape2VecSet。",
+      "note": "★★★ Native 3D 生成のスケールアップに必要な「表現 + 圧縮 + 大規模 flow matching」を一体で示した重量級論文。Best Paper 級。"
+    },
+    "award-saturday-differentiable-vector-qua": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2604.10546",
+      "one_line": "VQ codebook を分布として微分可能に緩和し、entropy 損失で latent prior を直接整形する end-to-end rate-distortion 最適化 (RDVQ)。",
+      "problem": "VQ ベース画像圧縮はコードブックの離散性により rate-distortion を end-to-end 最適化できず、独立に entropy model を学習する必要があった。Codebook 自体を bitrate に応じて整形する枠組みが欠けていた。",
+      "contribution": "(1) Codebook を分布として微分可能に緩和し、rate と distortion を統一目的で最適化する RDVQ。(2) Entropy 損失が latent prior を直接 shape する。(3) 軽量アーキテクチャで低ビットレート域 perceptual 品質を SOTA。(4) パラメータ数を大幅削減しつつ既存 generative compression を凌駕。",
+      "idea": "Hard VQ 割り当てを Gumbel-Softmax 系の連続緩和に置き換え、コードブック分布 → entropy → bitrate の経路を完全微分可能にする。これにより rate-distortion 損失の勾配がコードブック自体に流れ、生成的圧縮の rate 整形が学習中に実現。",
+      "key_figures": "Fig. 1 — RDVQ の微分可能 codebook 緩和概念図。Rate-PSNR/LPIPS 曲線で既存 generative compression 比較。",
+      "evaluation": "Kodak, CLIC 等で低ビットレート perceptual 品質 (LPIPS, FID) と PSNR を測定し、HiFiC, MS-ILLM 等を凌駕またはパラメータ削減で同等。",
+      "future_work": "—",
+      "related_work": "VQ-VAE, HiFiC, MS-ILLM, CDC (Conditional Diffusion Compression), ELIC。",
+      "note": "★★★ VQ を rate-distortion 視点で再定式化する理論的貢献。生成的圧縮の主流派に対する明確な代替案。"
+    },
+    "award-saturday-finer-mllms-hallucinate-u": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2603.17662",
+      "one_line": "MLLM が長文クエリ中の微小な誤りを見逃す「fine-grained negative」幻覚を体系化し、ベンチマークと DPO 訓練法を提案。",
+      "problem": "MLLM の hallucination 評価は粗粒度クエリ中心で、長文中に紛れた微妙な誤り (fine-grained negative) を見逃す失敗モードが過小評価。実応用での信頼性低下を招く。",
+      "contribution": "(1) Fine-grained Negative Queries (FINER) という新しい幻覚モード定義。(2) FINER-CompreCap / FINER-DOCCI の 2 ベンチで multi-object/attribute/relation/what の 4 設定を分析。(3) InternVL3.5-14B は精度 80% → 20% 程度に崩壊と判明。(4) DPO ベースの FINER-Tuning で最大 24.2% 改善、8 既存幻覚スイートでも性能向上。",
+      "idea": "Negative query 中の誤情報が、画像に実在する要素と共起すると MLLM はそれを真と認識して幻覚する。この共起構造を再現したベンチマークで体系評価し、対比的好ましさを DPO で学習させて修正する。",
+      "key_figures": "Fig. 1 — FINER 幻覚の代表例 (細部のみが誤る長文クエリ)。各 MLLM の精度劣化グラフ。FINER-Tuning 前後の改善表。",
+      "evaluation": "FINER-CompreCap / FINER-DOCCI と 8 既存幻覚ベンチで GPT-4V, InternVL, Qwen-VL 等を評価。DPO Fine-tuning で最大 +24.2%。",
+      "future_work": "—",
+      "related_work": "POPE, HallusionBench, AMBER, MMHal-Bench, OPERA。",
+      "note": "★★★ 評価・診断・修正の 3 点セットが揃った MLLM 幻覚研究の決定版的論文。実応用への影響大。"
+    },
+    "award-saturday-prophy-progressive-physic": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.05564",
+      "one_line": "VLM の物理推論を Mixture-of-Physics-Experts に転移し、video 生成における局所物理整合性を progressive に揃える。",
+      "problem": "現状の video 生成モデルは物理整合性が乏しく、大規模・複雑ダイナミクスで破綻する。既存手法は physics prompt に等方的に反応し、生成内容と局所物理キューの細粒度整合を欠く。",
+      "contribution": "(1) Progressive Physical Alignment framework ProPhy。(2) 二段 Mixture-of-Physics-Experts (MoPE): Semantic Experts が text 由来の物理原則を、Refinement Experts が token 単位の物理ダイナミクスを担当。(3) VLM の物理推論を Refinement Experts に転移する alignment 戦略。(4) Anisotropic で explicit な physics-aware conditioning。",
+      "idea": "物理整合性を「意味レベル原則」と「token レベル動力学」に分解し、それぞれを専門家ネットワークで担当。VLM の物理知識を distillation で取り込むことで、生成 token ごとの局所動力学整合を実現。",
+      "key_figures": "Fig. 1 — Progressive physical alignment と MoPE の概念図。生成 video の物理整合性 (落下、衝突など) の比較。",
+      "evaluation": "Physics-aware video generation ベンチ (PhyGenBench, VideoPhy 等) で物理整合性メトリックと visual quality を baseline 比較。",
+      "future_work": "—",
+      "related_work": "VideoPhy, PhyGenBench, DiffPhy, Cosmos (NVIDIA), PhysGen。",
+      "note": "★★★ 物理整合 video 生成の主要トピックに MoE × VLM distillation を持ち込む。Saturday 4D PAI-Bench と併読価値高。"
+    },
+    "award-saturday-chorus-multi-teacher-pret": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.17817",
+      "one_line": "言語・汎用・物体認識の 3 種 2D 基盤モデルから distillation し、holistic な feed-forward 3DGS scene encoder を multi-teacher 事前学習。",
+      "problem": "3DGS は 3D scene 表現として急速に普及したが、その上の汎用 scene encoder が未確立。単一 teacher からの distillation では high-level semantics と細粒度 structure を同時に獲得できない。",
+      "contribution": "(1) Multi-teacher pretraining による holistic な feed-forward 3DGS encoder Chorus。(2) Language-aligned / generalist / object-aware の 3 種 2D 基盤モデルを teacher に。(3) 共有 3D encoder + teacher-specific projector で共通埋め込み空間を学習。(4) Open-vocabulary segmentation, linear/decoder probing, データ効率, LLM-QA 等多タスクで強い性能。(5) Point cloud variant も提供。",
+      "idea": "2D 基盤モデルの相補的シグナル (CLIP の言語整合、DINO の汎用、SAM の物体認識) を Gaussian 単位の 3D 特徴に同時 distillation。共有 encoder を介して埋め込み空間を統合し、3DGS を「学習済み 3D 表現」として下流に流用可能にする。",
+      "key_figures": "Fig. 1 — Multi-teacher distillation の全体図 (3D encoder + 3 つの projector)。下流タスク比較 (segmentation / QA / probing)。",
+      "evaluation": "Open-vocabulary semantic / instance segmentation, linear/decoder probing, data-efficient supervision, LLM Q&A 等で SOTA。Point cloud ベンチでも competitive。",
+      "future_work": "—",
+      "related_work": "Feature 3DGS, LangSplat, OpenGaussian, SAM3D, OpenScene, Gaussian2Scene。",
+      "note": "★★★ 3DGS を「scene foundation model 」化する野心的方向。Multi-teacher で 2D 基盤の総合知を 3D に移植する設計が秀逸。"
+    },
+    "award-saturday-linear-fundamental-matrix": {
+      "rating": 2,
+      "arxiv_url": null,
+      "one_line": "古典的 7-/5-点 fundamental matrix 推定を線形化する CVPR 2026 oral 論文 (arXiv 未公開、ID 40341)。",
+      "problem": "古典的 8 点 / 7 点 / 5 点 fundamental matrix 推定は、ランク 2 制約と非線形多項式系を伴うため、minimal solver は数値的に複雑で RANSAC のループ内で高コスト。Linear かつ低点数で安定な解法が望ましい。",
+      "contribution": "(1) 7 点または 5 点から fundamental matrix を線形に推定する新しい minimal solver。(2) 数値的安定性と速度を両立。(3) RANSAC 内での反復コスト削減により realistic SfM/MVS パイプラインに直結。",
+      "idea": "Fundamental matrix の自由度 (DoF=7) と det(F)=0 制約を、追加情報 (SIFT 共変構造 or 別の geometric prior) と組み合わせて線形系に落とす想定。",
+      "key_figures": "(arXiv未公開) Fig. 1 で線形解法のパイプライン、Fig. 4 で既存 7-/8-点法との数値精度・速度比較を想定。",
+      "evaluation": "標準的 SfM ベンチ (Strecha, IMC2020/2021/2022 等) で AUC / pose 精度 / RANSAC inlier 数を比較想定。",
+      "future_work": "—",
+      "related_work": "Hartley の 8 点法, 7-point algorithm, Barath の 5-point (arXiv 1803.00260), Nistér の 5-point (relative pose)。",
+      "note": "★★ Geometric vision の古典的問題への新解法。CVPR 2026 Oral Paper ID 40341、arXiv 未公開のため詳細は会場発表時に確認。"
+    },
+    "award-saturday-vggt-": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2605.15195",
+      "one_line": "Register と register attention で効率化された feed-forward 3D 再構成モデル VGGT-Ω。30% メモリで 15× データで訓練、動的シーン対応。",
+      "problem": "VGGT 系の feed-forward 3D 再構成はスケール拡大が困難で、高解像度 conv 層が GPU メモリと計算を圧迫し、また dynamic scene への対応も限定的。Spatial 理解の scalable な proxy task として更なる効率化が必要。",
+      "contribution": "(1) 単一 dense prediction head と multi-task supervision を採用し高解像度 conv 層を排除。(2) Scene 情報を集約する register と inter-frame 情報交換を register に限定する register attention を導入。(3) 訓練時 GPU メモリ約 30%、教師あり 15× 大規模化 + ラベルなし動画も活用。(4) 静的・動的シーンで強い 3D 再構成性能、Sintel カメラ推定で 77% 改善。",
+      "idea": "Image token 間の全結合 attention を register tokens 経由に絞ることで効率化し、register 自体が「シーン要約」として複数タスクや VLA への接続点になる。Self-supervised 動画から大規模事前学習可能。",
+      "key_figures": "Fig. 1 — Register attention アーキテクチャ図。学習効率比較 (メモリ vs データ規模)。Sintel/TUM/KITTI 等での 3D 再構成結果。",
+      "evaluation": "Sintel (camera 精度 +77%), Re10K, TUM, KITTI 等で静的/動的 3D 再構成と camera estimation を評価し SOTA。Register が VLA や言語整合にも有用と示す。",
+      "future_work": "—",
+      "related_work": "VGGT (前身), DUSt3R, MASt3R, MonST3R, CUT3R, π³。",
+      "note": "★★★ Feed-forward 3D 再構成の決定打的アップデート。「3D 再構成 = spatial 理解の proxy task」という主張は CVPR 2026 の流れ (VLA, world model) と直結。"
+    },
+    "award-saturday-nitrogen-an-open-foundati": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2601.02427",
+      "one_line": "40,000 時間・1,000+ ゲームの video-action データで behavior cloning し、未見ゲームに 52% 改善で転移する vision-action 基盤モデル。",
+      "problem": "汎用 gaming agent には大規模 video-action データと cross-game generalization が必要だが、公開された大規模 vision-action 基盤モデルとそのベンチ環境が不足。",
+      "contribution": "(1) 公開 gameplay video から自動的に player action を抽出する internet-scale video-action データセット (40,000h, 1,000+ games)。(2) Cross-game 汎化を測れる multi-game benchmark 環境。(3) 大規模 behavior cloning で訓練された unified vision-action モデル NitroGen。(4) 未見ゲームで成功率 +52% (scratch 比)。(5) データ・評価・weights をフルオープンに。",
+      "idea": "公開動画から action ラベルを自動抽出する pipeline により、internet-scale で「観測→操作」を学習。3D action, 2D platformer, procedural exploration など多様な domain を共通 model で扱う。",
+      "key_figures": "Fig. 1 — Dataset pipeline (video → action 抽出)。Benchmark 環境のスクリーンショット。未見ゲームでの transfer 性能棒グラフ。",
+      "evaluation": "Multi-game benchmark で未見ゲーム成功率を scratch 訓練比 +52%。3D 戦闘 / 2D platformer / procedural world で汎化能力を確認。",
+      "future_work": "—",
+      "related_work": "VPT (Video PreTraining), Gato, GATO, MineDojo, GR-1, OpenVLA。",
+      "note": "★★★ Gaming agent 版の VPT。データ/環境/モデル/コードを全公開する点で community impact が大きい。Best Paper 候補に相応しい。"
+    },
+    "award-saturday-pai-bench-a-comprehensive": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.01989",
+      "one_line": "生成・条件付き生成・理解の 3 トラックで Physical AI を統一評価する 2,808 ケースのベンチマーク。",
+      "problem": "Physical AI の評価は perception と prediction が断片化しており、video 生成・条件付き生成・video 理解を横断する統一ベンチが欠如。物理的妥当性とドメイン推論を同時に評価する仕組みが必要。",
+      "contribution": "(1) Physical AI 用の統一ベンチ PAI-Bench (2,808 実世界ケース)。(2) PAI-Bench-G (生成: 視覚品質 + 物理妥当性, MLLM-as-Judge ベース Domain Score)。(3) PAI-Bench-C (条件付き生成: multimodal 制御忠実度 + 多様性)。(4) PAI-Bench-U (理解: 物理常識 + embodied reasoning)。(5) 生成モデルは visual fidelity に強いが物理動力学に弱い、MLLM は予測・因果推論に弱い、と体系的に示す。",
+      "idea": "Physical AI を「生成 → 条件付き生成 → 理解」の 3 軸に整理し、各軸に task-aligned 指標 (物理妥当性 Domain Score など) を整備。MLLM-as-Judge を活用して大規模かつ細粒度な評価を可能に。",
+      "key_figures": "Fig. 1 — 3 トラック (G/C/U) の概念図。Domain Score の例。各 SOTA モデルの track 別レーダーチャート。",
+      "evaluation": "主要 video 生成 (Sora, Cosmos, Wan), 条件付き生成 (CogVideoX, Stable Video), MLLM (GPT-4o, Gemini, InternVL) を 2,808 ケースで評価し、物理整合性の弱点を可視化。",
+      "future_work": "—",
+      "related_work": "VideoPhy, PhyGenBench, Cosmos (NVIDIA), VBench, EgoSchema。",
+      "note": "★★★ Physical AI の standard benchmark になり得るインフラ論文。同 session の ProPhy と併せて視るべき。"
+    },
+    "award-saturday-refav-towards-planning-ce": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2505.20981",
+      "one_line": "1000 ドライブログから自然言語クエリで複雑な multi-agent 相互作用シナリオを mine する 10,000 クエリのベンチ。VLM の弱点を可視化。",
+      "problem": "自動運転のログから安全・計画上重要なシナリオを抽出する作業は、人手の structured query に依存し時間と誤検出が多く、scalable でない。VLM での自動 scenario mining は未検証。",
+      "contribution": "(1) Argoverse 2 から 10,000 NL クエリ × 1,000 ドライブログの RefAV データセット (407 ユニークシナリオ記述)。(2) 計画関連の multi-agent インタラクションを言語で記述、自車および周辺 150m 物体まで対象。(3) Spatio-temporal scenario mining を VLM 視点で再定式化、時間と空間で正確に localize。(4) 既存 VLM をそのまま転用すると性能が低く、本問題のユニークな困難さを示す。",
+      "idea": "シナリオを bounding-box ベースではなく自然言語で表現し、VLM に時空間的 grounding を求める。Planning との関連性を中心に据えることで、検出ではなく行動意思決定に有用なシナリオ抽出を目指す。",
+      "key_figures": "Fig. 1 — Scenario mining task の概念図 (NL クエリ → 時空間 localization)。VLM ベースライン vs RefAV 困難クエリの比較。",
+      "evaluation": "RefAV ベンチで複数の off-the-shelf VLM (GPT-4V, InternVL, Qwen-VL 等) と RefAV ベースラインを比較し、ナイーブ転用の限界を定量化。",
+      "future_work": "—",
+      "related_work": "Argoverse 2, nuScenes-QA, DriveLM, LingoQA, DriveVLM。",
+      "note": "★★★ Planning-centric な scenario mining という新タスク設定。AV 業界にとって実用価値の高い benchmark。"
+    },
+    "award-saturday-soccermaster-a-vision-fou": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.11016",
+      "one_line": "サッカー特化 vision foundation model。Soccer-Factory データで multi-task 事前学習し、検出・追跡・解説・分類等を unified に解く。",
+      "problem": "サッカー解析は detection, tracking, calibration, commentary 等の個別 expert モデルに分断され、相互の知識共有がない。スポーツ特化 foundation model が未整備。",
+      "contribution": "(1) サッカー特化 vision foundation model SoccerMaster (CVPR 2026 Oral)。(2) 自動データ curation pipeline で多様な既存サッカー動画データを統合した Soccer-Factory データリソース。(3) 単一モデルで spatial perception (選手検出, pitch registration, camera calibration, MOT) と semantic reasoning (commentary 生成等) を統合。(4) Task-specific expert を一貫して上回る。",
+      "idea": "Supervised multi-task pretraining を採用し、複数サッカータスクの教師信号を共有 backbone に注入。これによりタスク間の知識転移が起き、domain-specific な foundation model が構築可能。",
+      "key_figures": "Fig. 1 — SoccerMaster のマルチタスク統合図。Soccer-Factory データ構成。各タスクでの SOTA 比較表。",
+      "evaluation": "SoccerNet, SoccerNet-v3, ASL-v2 等のサッカーベンチで commentary, MOT, detection, calibration, classification を評価し、各タスク特化モデルを上回る。",
+      "future_work": "—",
+      "related_work": "SoccerNet シリーズ, SportsMOT, MatchTime, SoccerNet-Caption, SAM。",
+      "note": "★★★ ドメイン特化 vision foundation model の好例。スポーツ AI 業界への波及効果大。"
+    },
+    "award-saturday-gaussianfluent-gaussian-s": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2601.09265",
+      "one_line": "3DGS 上で内部構造を生成し、適合化した CD-MPM で脆性破壊・流体・粒状崩壊を含む混合材料のダイナミックシミュレーション。",
+      "problem": "3DGS ベースの物理シミュレーションは soft / deformable 材料が中心で、脆性破壊や流体を含む混合材料のシミュレーションは未解決。GS は表面表現で内部 volumetric texture を持たず、fracture-aware なシミュレーション手法も欠如。",
+      "contribution": "(1) Generative model 誘導で内部 Gaussian を densify し photoreal な内部 texture を合成。(2) Continuum Damage Material Point Method (CD-MPM) を GS 用に最適化し脆性破壊を高速シミュレート。(3) Shattering, deformation, fluid splashing, cutting, granular collapse を高 fidelity に統合シミュレート。(4) GS 表現内で完結する物理シミュ。",
+      "idea": "GS の外殻のみという欠点を「生成モデルで内部 Gaussian を densify」することで補い、material point method 系の物理ソルバを直接 Gaussian 群に適用。Damage 場を MPM に組み込み破壊を表現。",
+      "key_figures": "Fig. 1 — 内部 texture synthesis 前後の比較。CD-MPM パイプライン図。Shattering / fluid splash / granular collapse の連続フレーム。",
+      "evaluation": "様々な混合材料シーン (ガラス破壊、液体注入、粒状崩壊) で visual fidelity と物理整合性を比較。既存 GS-physics (PhysGaussian 等) を上回る品質。",
+      "future_work": "—",
+      "related_work": "PhysGaussian, PhysDreamer, Spring-Gaus, MPM (Material Point Method), VR-GS。",
+      "note": "★★★ 3DGS × 物理シミュの境界を「脆性破壊・混合材料」まで拡張。CVPR 2026 の dynamic 3D 系の重要論文。"
+    },
+    "award-saturday-memory-augmented-scene-un": {
+      "rating": 2,
+      "arxiv_url": null,
+      "one_line": "Open-world aerial object-goal navigation のための memory-augmented scene 理解 + exploration フレームワーク (arXiv 未公開、ID 40327)。",
+      "problem": "ドローン等の aerial agent が未知環境で言語指定された物体に到達するには、広域シーンの逐次的理解とそれに基づく能動的探索が必要だが、地上型より open-world 性が強く既存 navigation 手法は転用困難。",
+      "contribution": "(1) Open-world aerial object-goal navigation 用の memory-augmented フレームワーク。(2) Scene understanding と exploration を統合し過去観測を memory に蓄積。(3) 言語指定物体への到達精度と効率を既存手法より向上 (想定)。",
+      "idea": "観測された aerial シーンの semantic / spatial 情報を persistent memory に蓄積し、現在観測と統合して exploration policy を決定。Open-world 物体に対応するため open-vocabulary な semantic 表現と組み合わせる。",
+      "key_figures": "(arXiv未公開) Fig. 1 で memory + exploration の概念図、Fig. 4 で UAV シミュレーション環境での到達性能比較を想定。",
+      "evaluation": "UAV-ON 等の aerial navigation ベンチで SR / SPL / 探索効率を baseline (frontier exploration, image-goal) と比較想定。",
+      "future_work": "—",
+      "related_work": "RAVEN (arXiv 2509.23563), APEX (arXiv 2602.00551), UAV-ON (arXiv 2508.00288), OVAL (arXiv 2604.12872)。",
+      "note": "★★ arXiv 未公開 (CVPR 2026 Oral Paper ID 40327)。Drone × embodied AI として我々の研究と関連。発表時に詳細確認。"
+    },
+    "award-saturday-monocular-open-vocabulary": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2602.22667",
+      "one_line": "屋内シーン向け monocular open-vocabulary 占有予測 LegoOcc。3D Language-Embedded Gaussians を中間表現に幾何のみ教師で学習。",
+      "problem": "屋外運転ドメインで発展した open-vocabulary 占有予測は、屋内 (高密度幾何、複雑レイアウト、細粒度意味) に転移しづらく、屋内 embodied agent 用の占有予測が未確立。",
+      "contribution": "(1) Monocular open-vocabulary 屋内占有予測 LegoOcc。(2) Binary occupancy ラベルのみで学習する geometry-only supervision。(3) 3D Language-Embedded Gaussians を中間表現に採用し細粒度 3D 幾何と言語整合 semantic を結合。(4) Occ-ScanNet で IoU 59.50、mIoU 21.05 と既存手法を mIoU で大幅に凌駕。",
+      "idea": "屋内特有の高密度 / 細粒度を扱うため、3D Gaussian に言語埋め込みを付与した中間表現を使い、occupancy 教師は 2 値だけにして semantic は CLIP 系 distillation で獲得。これにより semantic ラベル不要で open-vocabulary が成立。",
+      "key_figures": "Fig. 1 — LegoOcc アーキテクチャ (RGB → 3D Language-Embedded Gaussians → occupancy)。Occ-ScanNet 上の open-vocabulary 占有可視化。",
+      "evaluation": "Occ-ScanNet で IoU 59.50 / mIoU 21.05、既存 open-vocabulary 占有 (NDC-Scene, MonoOcc 系) を大幅に上回る。",
+      "future_work": "—",
+      "related_work": "MonoScene, OccFormer, POP-3D, NDC-Scene, LangSplat, OpenScene。",
+      "note": "★★★ 屋内 embodied agent 用の occupancy として実用価値高。Language-Embedded Gaussians のドメイン適用例として参考。"
+    },
+    "award-saturday-r2-seg-training-free-ood": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2511.12691",
+      "one_line": "LLM 解剖学推論で ROI を生成 → BiomedParse 候補を統計棄却で篩い、OOD 腫瘍を訓練不要にセグメントする 2 段 Reason-and-Reject 法。",
+      "problem": "医療画像の腫瘍セグメンテーションは OOD 症例 (新規モダリティ・施設・腫瘍タイプ) で著しく劣化し、ファインチューニングは catastrophic forgetting と計算コストの両面で困難。Training-free でロバストな手法が必要。",
+      "contribution": "(1) Training-free な 2 段 Reason-and-Reject フレームワーク R²-Seg。(2) Reason: LLM 誘導の解剖学的推論プランナで organ anchor を局所化し multi-scale ROI を生成。(3) Reject: 凍結 BiomedParse の候補に two-sample 統計検定を適用し、normal tissue と有意に異なる候補のみ採用。(4) Test-time augmentation と互換、catastrophic forgetting なし。(5) Multi-center / multi-modal 腫瘍ベンチで Dice / specificity / sensitivity を大幅改善。",
+      "idea": "Foundation model の限界を「解剖学知識による空間 prior」と「統計的 outlier 検定」の 2 段で補う。LLM が医学知識で領域を絞り、次に統計テストで偽陽性を棄却するため、訓練データに依存しない汎化が得られる。",
+      "key_figures": "Fig. 1 — Reason-and-Reject パイプライン (LLM 解剖学 → ROI → BiomedParse → 統計棄却)。Multi-center 腫瘍ベンチでの Dice 改善表。",
+      "evaluation": "Multi-center / multi-modal 腫瘍セグベンチで Dice / specificity / sensitivity を BiomedParse, MedSAM 等の foundation model 比較で大幅に向上。",
+      "future_work": "—",
+      "related_work": "MedSAM, BiomedParse, SAM-Med2D, SegVol, nnU-Net。",
+      "note": "★★★ Foundation model + LLM 推論 + 統計検定の 3 つを組み合わせた training-free 医療 AI の好例。臨床応用への影響大。"
+    },
+    "award-saturday-the-sa-fari-dataset-segme": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2511.15622",
+      "one_line": "10 年・4 大陸・99 種・11,609 動画の野生動物カメラトラップ multi-animal tracking データセット。94 万 BBox + masklet + 種ラベル。",
+      "problem": "野生動物の保全・生態学的研究には大規模かつ多種多地域な video データが必要だが、既存 MAT データセットは種数・地理多様性・アノテーション品質のいずれかが不十分。",
+      "contribution": "(1) 史上最大の野生動物 multi-animal tracking データ SA-FARI: 4 大陸 741 地点、99 種、11,609 動画 (10 年)。(2) ~46 時間に 16,224 masklet ID、942,702 個の BBox / mask / 種ラベル。(3) SAM ベースのアノテーション pipeline で高品質な spatio-temporal annotation。(4) 種認識・個体識別・セグメンテーション・追跡を統合的に支援。(5) Open-sourced。",
+      "idea": "カメラトラップ video × SAM 系基盤モデルを組み合わせ、人手アノテーションのスケーラビリティ限界を突破。種・地域・時期の多様性を確保することで in-the-wild の汎化を可能にする。",
+      "key_figures": "Fig. 1 — 4 大陸の地理分布マップ。種別/地点別の統計。Masklet 例とアノテーション品質比較。",
+      "evaluation": "従来 MAT データ (TAO, BURST 等) と diversity / 規模を比較。SA-FARI 上で SAM2, OmniTracker 等の MAT 手法を評価し新規ベンチマークとして提示。",
+      "future_work": "—",
+      "related_work": "TAO, BURST, SA-V (SAM2 dataset), iWildCam, Snapshot Serengeti。",
+      "note": "★★★ 保全 AI のための基盤データセット。SAM2 系の generalist segmentation を野生動物に展開する道を拓く。"
+    },
+    "award-saturday-vggt-segmentor-geometry-e": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2604.13596",
+      "one_line": "VGGT の幾何特徴に Union Segmentation Head を載せ、egocentric/exocentric の cross-view インスタンスセグメンテーションを精緻化。",
+      "problem": "Egocentric/exocentric の極端な視点・尺度・遮蔽差を跨ぐインスタンスセグメンテーションは、pixel-level matching が破綻し困難。VGGT のような幾何モデルは cross-view feature alignment に強いが、dense 予測では pixel-level projection drift により失敗する。",
+      "contribution": "(1) VGGT の cross-view 幾何特徴を活用しつつ pixel-accurate な semantic segmentation を統合する VGGT-Segmentor (VGGT-S)。(2) Union Segmentation Head を新規導入し projection drift を補正。(3) Egocentric-exocentric cross-view instance segmentation で SOTA。(4) Embodied AI / 遠隔協調等の応用視野。",
+      "idea": "VGGT の幾何整合特徴を保ちつつ、視点間で同一インスタンスを統一的に対応付ける segmentation head を設計。Projection drift を許容する union 演算で pixel-level の精度を回復させる。",
+      "key_figures": "Fig. 1 — VGGT-S 全体図 (VGGT backbone + Union Segmentation Head)。Ego-exo cross-view 結果の比較可視化。",
+      "evaluation": "Ego-Exo4D 等の cross-view インスタンスセグ benchmark で IoU / AP を baseline (CLIP-Seg, SAM 系) と比較し SOTA。",
+      "future_work": "—",
+      "related_work": "VGGT (前身), DUSt3R, SegVGGT (arXiv 2603.19926), IGGT, Ego-Exo4D。",
+      "note": "★★★ VGGT エコシステムの segmentation 拡張。同 session の VGGT-Ω と併せて見ると、幾何 backbone の下流展開トレンドが俯瞰できる。"
+    },
+    "award-sunday-evidential-neural-radiance-": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2602.23574",
+      "one_line": "Evidential learningでNeRFの偶然・認識不確実性を単一順伝播で同時定量化",
+      "problem": "NeRFは新規視点合成で高精度を達成するが不確実性推定が欠落し、安全クリティカル応用に展開しづらい。既存の不確実性手法は計算コストや再構成品質を犠牲にする。",
+      "contribution": "(1) NeRFレンダリングプロセスにシームレスに統合される証拠的(evidential)確率枠組みの提案、(2) 単一順伝播で偶然(aleatoric)と認識(epistemic)不確実性を同時に推定、(3) レンダリング品質を維持しつつ計算オーバーヘッドを最小化、(4) 3つの標準ベンチマークでSOTAを達成。",
+      "idea": "ボリュームレンダリング過程で各サンプル点の出力に対しNormal-Inverse-Gamma等の証拠分布をパラメトライズし、レンダリング積分内で証拠を集約することで両不確実性を分離抽出する。",
+      "key_figures": "evidential rendering pipelineのアーキテクチャ図、aleatoric/epistemic uncertainty mapの可視化、ベースラインとのRMSE-uncertainty相関プロット。",
+      "evaluation": "複数の標準NeRFベンチマークで再構成精度と不確実性キャリブレーションの両面でSOTAを達成。MC-DropoutやEnsemble系より高速かつ高精度。",
+      "future_work": "動的シーンや大規模3DGSへの拡張、安全クリティカルロボット応用での実機検証。",
+      "related_work": "NeRF (Mildenhall+ 2020)、Bayesian NeRF、CF-NeRF/ActiveNeRF、Evidential Deep Learning (Sensoy+ 2018)。",
+      "note": "Yale大学(Ruxiao Duan, Alex Wong)。CVPR 2026 Oral。コードはGitHub KerryDRX/EvidentialNeRFで公開。"
+    },
+    "award-sunday-global-aware-edge-prioritiz": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2602.21963",
+      "one_line": "GNNでSfMポーズグラフのエッジを全体最適視点でランク付けする初期化手法",
+      "problem": "SfMでは全画像ペアの幾何検証は高コストなため候補エッジを絞り込む必要がある。既存手法は画像検索ベースのk近傍で各ペアを独立処理し、グローバル整合性を無視するため再構成精度が劣化する。",
+      "contribution": "(1) SfM由来監督で学習しグローバル整合的エッジ信頼度を予測するGNN、(2) ランクに基づくmulti-minimal-spanning-treeポーズグラフ構築、(3) 弱領域を強化しグラフ径を最小化する接続性考慮スコア変調、(4) 公開コードとモデル。",
+      "idea": "全画像ペアを単独評価せず、候補エッジをグラフ上のノード関係としてGNNで集約し、SfMでの有用性を直接予測する。さらに複数MSTで疎で頑健なグラフを構築する。",
+      "key_figures": "GNN-based edge prioritization パイプライン図、再構成精度vs候補エッジ数のトレードオフ曲線、曖昧シーンでの定性比較。",
+      "evaluation": "スパース・高速設定での再構成精度向上、曖昧シーンでSOTA retrieval手法を上回る性能、より信頼性が高くコンパクトなポーズグラフを生成。",
+      "future_work": "動的シーンやストリーミングSfMへの拡張、より大規模なクラウドソーシング画像群への適用。",
+      "related_work": "HiPE (Hierarchical Initialization)、Efficient initial pose-graph for global SfM、画像検索ベースペア選択 (NetVLAD等)。",
+      "note": "Czech Technical Univ ×ETH Zurich×SZTAKI。CVPR 2026 Oral。GitHub weitong8591/global_edge_priorで公開。"
+    },
+    "award-sunday-molmo2-open-weights-and-dat": {
+      "rating": 4,
+      "arxiv_url": "https://arxiv.org/abs/2601.10611",
+      "one_line": "プロプライエタリ蒸留に依存しないOSS VLMの動画・グラウンディング拡張Molmo2",
+      "problem": "強力なVLMはほぼ全てプロプライエタリで、オープン重み版は閉鎖VLMからの合成データに依存。動画理解とポイントベースグラウンディングを統合した完全オープンVLMは未確立。",
+      "contribution": "(1) プロプライエタリVLM不使用で構築した7本の動画データセット+2本のマルチ画像データセット、(2) 動画ポインティング/トラッキングデータの新規導入、(3) packingとmessage-tree encodingによる効率学習、(4) 8Bモデルが動画counting/pointing/trackingでQwen3-VL・Gemini3 Proを凌駕。",
+      "idea": "ポイント駆動グラウンディングを動画・マルチ画像に拡張し、双方向Attentionとtoken重み戦略で映像トークン処理を改善。データはVLMを使わず人手・規則ベースで収集。",
+      "key_figures": "Molmo2全体パイプライン、PixMo2データセット構成図、動画ベンチマーク(counting/pointing/tracking)での比較棒グラフ。",
+      "evaluation": "動画countingで35.5 vs Qwen3-VL 29.6、動画pointingで38.4 vs Gemini3 Pro 20.0 F1、動画trackingで56.2 vs 41.1 J&F。多くの動画ベンチマークでオープン最高。",
+      "future_work": "より長尺の動画理解、3D空間理解との統合、行動・身体性タスクへの展開。",
+      "related_work": "Molmo/PixMo (2409.17146)、Qwen-VL系、LLaVA-Video、Gemini系VLM。",
+      "note": "Allen Institute for AI。CVPR 2026 Oral本命。完全公開のオープンエコシステム。"
+    },
+    "award-sunday-u2flow-uncertainty-aware-un": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "RAFT/SAMを統合した不確実性認識型の教師なし光フロー推定",
+      "problem": "教師なし光フローは遮蔽・無テクスチャ・動境界で輝度恒常性が破綻し精度が頭打ち。出力の信頼度を明示的にモデル化する枠組みは限定的。",
+      "contribution": "(1) 教師なし光フローにおける不確実性認識学習フレームワーク、(2) SAMによるセマンティック事前情報を活用したロス再重み付け、(3) RAFTバックボーンとSMURFのフルイメージワーピングを統合、(4) KITTI/Sintelで教師なし光フローSOTA。",
+      "idea": "出力フローと共に不確実性マップを予測し、輝度損失・遮蔽推定をその信頼度で重み付け。SAMのセグメンテーション境界をフロー境界事前知識として活用しARFlowのlearning-by-analogyを拡張。",
+      "key_figures": "U2Flowのアーキテクチャ図、不確実性マップ可視化、KITTI/Sintelでの誤差マップ比較。",
+      "evaluation": "KITTI/Sintelで教師なし光フローのSOTAを達成。事前訓練+ファインチューニングの2段階訓練。",
+      "future_work": "動画長期一貫性、リアルタイム化、教師あり手法との蒸留統合。",
+      "related_work": "UnFlow、ARFlow、SMURF、RAFT、SAM(Segment Anything)。",
+      "note": "arXiv未公開(2026/05時点)、コードはGitHub sunzunyi/U2FLOW。CVPR 2026 Oral。"
+    },
+    "award-sunday-learning-latent-concepts-fo": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "潜在概念空間を学習し未知物体を物体検出器が頑健に検出する枠組み",
+      "problem": "オープンワールド物体検出ではOOD物体は学習分布外のため誤分類・見落としが多発。既存OOD検出は分類タスクでの距離・密度ベースが主で、検出ヘッドの局所性に適応した概念空間は未整備。",
+      "contribution": "(1) 物体検出のための潜在概念空間学習枠組み、(2) ID特徴を概念にクラスタリングしOODをそれら外として弁別する目的関数、(3) 既存検出器(RoI head)へのプラグイン構成、(4) OOD物体検出ベンチでSOTAを達成。",
+      "idea": "学習中にIDクラスごとの分布をコンパクトな潜在概念群として整理し、OOD物体は全概念から離れる位置に押し出されるよう対照学習。検出時は概念類似度スコアでOOD判定。",
+      "key_figures": "概念空間のt-SNE可視化、IDコンセプト+OOD境界の概念図、検出失敗例の比較。",
+      "evaluation": "BDD/VOC-Detection等の標準OOD物体検出ベンチでAUROC/FPR95を改善し、既存ロジット・特徴ベース手法を上回る。",
+      "future_work": "ビデオ物体検出への拡張、概念の解釈可能性向上、Open-Vocabulary検出との統合。",
+      "related_work": "VOS (Du et al.)、SIREN、Concept-based Explanations for OOD detectors、Markov Logic OOD。",
+      "note": "arXiv未公開。タイトル・セッションから内容推定。CVPR 2026 Oral。"
+    },
+    "award-sunday-learning-diffeomorphism-for": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2405.18684",
+      "one_line": "時間連続UNetとセミグループ正則化でゼロ余分積分の微分同相医用画像位置合わせ",
+      "problem": "学習ベース微分同相画像位置合わせは複数の正則化項や数値積分が必要で、可逆性・滑らかさの保証が難しい。安定した時間連続フローを得るには余計な計算負荷が伴う。",
+      "contribution": "(1) セミグループ性を唯一の正則化として活用する新規枠組み、(2) 時間埋め込みUNetによる時間連続微分同相、(3) 追加積分なしで時間連続フローを生成、(4) OASIS/CANDIで学習・最適化両ベースラインに優越。",
+      "idea": "微分同相のセミグループ性φ_{s+t}=φ_s∘φ_tを損失として課し、時間tを入力に埋め込んだUNetがフローを直接予測。拡散モデルで用いる時間埋め込み手法を応用。",
+      "key_figures": "時間埋め込みUNetアーキテクチャ、セミグループ性検証プロット、変形場とDiceスコアの可視化。",
+      "evaluation": "OASISおよびCANDIの脳MRデータセットでDice/HD95を評価し、SyN等の最適化ベースおよびVoxelMorph系の学習ベースに優越。Time-Embedded Adversarial(訓練に対抗的損失も導入)。",
+      "future_work": "より高次元の時空間データへの拡張、不確実性推定との統合、臨床応用評価。",
+      "related_work": "VoxelMorph、SyN(ANTs)、LapIRN、TransMorph、Time-continuous flow ODE位置合わせ。",
+      "note": "Univ. Alberta(Matinkia, Ray)。CVPR 2026 Oral。タイトル末尾の'Adversarial'は本論文の対抗的学習成分を示唆。"
+    },
+    "award-sunday-quadsync-quadrifocal-tensor": {
+      "rating": 4,
+      "arxiv_url": "https://arxiv.org/abs/2602.22639",
+      "one_line": "ブロック四焦点テンソルをTucker分解しn視点カメラを同期復元する初の手法",
+      "problem": "SfMでは二焦点・三焦点テンソルが主流だが、四焦点テンソルは情報量が多いものの実用化されてこなかった。複数視点からの四焦点テンソル同期問題に対する解法が存在しない。",
+      "contribution": "(1) 四焦点テンソル同期の初の枠組み、(2) ブロック四焦点テンソルが多重線形ランク(4,4,4,4)のTucker分解を持つことを示し、因子行列がスタックカメラ行列であることを証明、(3) ADMMとIRLSによる最適化、(4) 二焦点・三焦点・四焦点を統一する同時同期アルゴリズム。",
+      "idea": "n枚画像の四焦点テンソルを全て積み上げたブロックテンソルが小さい多重線形ランクを保つ事実を利用し、Tucker分解の因子からカメラ行列を直接抽出。ADMM+IRLSで外れ値耐性を確保。",
+      "key_figures": "block quadrifocal tensorのTucker分解模式図、bifocal/trifocal/quadrifocal関係図、現代SfMデータセットでの再構成精度比較。",
+      "evaluation": "現代のSfMデータセットで数値実験を実施し、高次情報を用いた同期の有効性を実証。Oral採択。",
+      "future_work": "実画像での大規模SfMパイプラインへの統合、ロバスト性をさらに強化したエンドツーエンド学習版。",
+      "related_work": "Essential matrix synchronization、Trifocal tensor推定、Rotation/Translation averaging、Tucker decomposition。",
+      "note": "CVPR 2026 Oral。理論的に美しく、SfMの基礎を更新する位置付け。コード公開。"
+    },
+    "award-sunday-socialnav-training-human-in": {
+      "rating": 4,
+      "arxiv_url": "https://arxiv.org/abs/2511.21135",
+      "one_line": "脳-行動2層構造とSAFE-GRPOで社会規範準拠ナビゲーションを学習する基盤モデル",
+      "problem": "従来の身体性ナビゲーションは衝突回避中心で、人間との社会的相互作用や暗黙の社会規範の遵守が不十分。社会的に適切な軌道生成のための統一的基盤モデルが欠落。",
+      "contribution": "(1) SocNav Dataset(700万サンプル、認知活性化+専門家軌道ピラミッド)、(2) 階層的brain-actionアーキテクチャ、(3) 身体性ナビゲーション初のフローベースRL枠組みSAFE-GRPO、(4) SOTA比+38%成功率/+46%社会的準拠率。",
+      "idea": "上位脳モジュールがCoTで社会規範を推論し、下位アクションモジュールがフローマッチングで軌道を生成。模倣学習で初期化後、SAFE-GRPOで社会的準拠行動を報酬として強化。",
+      "key_figures": "brain-actionアーキテクチャ図、SocNav Datasetの構成図、社会的準拠率・成功率の比較棒グラフ。",
+      "evaluation": "社会的ナビゲーションベンチマークでSOTA比+38%成功率、+46%社会的準拠率を達成。インターネット動画・シミュ・実機ロボの三層データを統合。",
+      "future_work": "より複雑なマルチエージェント相互作用、文化差を反映した社会規範学習、長期記憶との統合。",
+      "related_work": "Social-LSTM/CrowdNav、ViNT/NoMaD等のナビゲーション基盤モデル、GRPO/DPOによる方策最適化、Flow Matching方策。",
+      "note": "CVPR 2026 Oral。具現化AIにおける社会知能フロンティアを切り拓く。"
+    },
+    "award-sunday-immeriris-a-large-scale-dat": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2510.10113",
+      "one_line": "HMD向け499K枚564人の最大級オフ軸虹彩データセットと正規化フリー認識",
+      "problem": "VR/AR HMDの虹彩認証は通常のオンアクシス前提と異なりオフ軸撮影で透視歪み・被験者内ばらつきが大きく、既存虹彩認識の精度が大きく落ちる。大規模な公開データセットも欠如。",
+      "contribution": "(1) HMD収集の499,791枚×564被験者の最大規模オフ軸虹彩データセットImmerIris、(2) 没入環境向け評価プロトコル、(3) 正規化フリーで眼部画像から直接学習する新パラダイム、(4) 各種困難条件でのベンチ。",
+      "idea": "従来は虹彩を極座標展開する正規化が必須だったが、オフ軸条件では正規化が誤差源となる。CNN/Transformerが眼部画像全体から識別特徴を学習することで正規化を不要化。",
+      "key_figures": "ImmerIrisデータ収集セットアップ図、サンプル画像と歪みパターン、正規化有無での認識精度比較。",
+      "evaluation": "ImmerIris上で各種ベースラインを比較し、正規化フリー手法が困難な条件で安定して優位を示す。条件別(視線角・照明・被験者間)プロトコルを整備。",
+      "future_work": "クロスデバイス汎化、スプーフィング耐性、マルチモーダル(顔/眼周辺)認証への展開。",
+      "related_work": "IrisCode/Daugman正規化、CASIA-Iris/ND-IRIS、Deep iris recognition (DeepIrisNet)、HMD eye-tracking dataset。",
+      "note": "CVPR 2026 Oral。VR/AR時代の生体認証データインフラ。"
+    },
+    "award-sunday-olatverse-a-large-scale-rea": {
+      "rating": 4,
+      "arxiv_url": "https://arxiv.org/abs/2511.02483",
+      "one_line": "765実物体×331光源×35カメラの9M枚OLAT撮影データセットで逆レンダリング基盤",
+      "problem": "実物体の逆レンダリング・法線推定の研究には精密照明制御下の大規模実データが不可欠だが、既存データは合成中心または小規模で素材多様性が限定。",
+      "contribution": "(1) 765実物体×35DSLR×331光源で約9M枚のOLAT(one-light-at-a-time)画像、(2) 較正済みカメラ・マスク・測光法線・拡散アルベドの付帯資源、(3) 逆レンダリング・法線推定の初の包括的実世界ベンチマーク、(4) 多様な素材カテゴリの被覆。",
+      "idea": "ライトステージで各物体に331光源を個別点灯したOLAT集合を撮影し、任意照明環境を線形結合で再現可能にする。さらに測光ステレオで真値法線・アルベドを得ることで監督つきベンチを実現。",
+      "key_figures": "ライトステージ撮影セットアップ、OLAT基底からの再ライティング合成例、素材カテゴリ統計と他データセットとの規模比較。",
+      "evaluation": "逆レンダリング・法線推定の主要手法をOLATverse上でベンチマークし、合成データのみ学習との差や領域汎化の課題を定量化。",
+      "future_work": "動的物体・透明/サブサーフェス物体への拡張、生成モデル学習データとしての活用、神経BRDF推定。",
+      "related_work": "Light Stage (Debevec+)、Objaverse、NeRFactor、Neural-PIL、Stanford ORB。",
+      "note": "MPI Informatics × Nanjing大。CVPR 2026 Oral。実世界inverse renderingベンチの決定版。"
+    },
+    "award-sunday-opendance-multimodal-contro": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2506.07565",
+      "one_line": "101時間14ジャンルの5モーダル舞踊データOpenDance5D+マスク化統一ダンス生成",
+      "problem": "3Dダンス生成は音楽駆動が中心で、テキスト・キーポイント等のマルチモーダル制御は不十分。データ規模・ジャンル多様性が乏しく、複合条件下の高品質生成が困難。",
+      "contribution": "(1) インターネット由来101時間×14ジャンル×5モーダル(RGB/音声/2Dキーポイント/3D動作/詳細テキスト)のOpenDance5D、(2) マスク化統一モデリングのOpenDanceNet、(3) 音楽+任意条件組合せでの制御可能ダンス生成、(4) 物理接触の自然さと多様性を両立。",
+      "idea": "マスクトークンモデリングで複数条件を同一バックボーンに統一し、推論時に与える条件マスクを変えるだけで任意の制御が可能。インターネット動画から多モーダルラベルを自動抽出。",
+      "key_figures": "OpenDance5Dの規模・ジャンル比較表、OpenDanceNetのマスクモデリング図、定性比較(複数条件付き生成例)。",
+      "evaluation": "音楽-動作整合FID/Beat align、多様性、テキスト追従性等で既存音楽-ダンス生成手法に優越。物理接触の自然さも定量評価。",
+      "future_work": "複数人ダンスや相互作用、長尺ダンス、リアルタイム生成、テキストでのスタイル微調整。",
+      "related_work": "AIST++、EDGE、Bailando、FineDance、MotionGPTのマスクモデリング系。",
+      "note": "CVPR 2026 Oral。アバター/VR向けエンターテインメント応用が期待。"
+    },
+    "award-sunday-relightable-holoported-char": {
+      "rating": 4,
+      "arxiv_url": "https://arxiv.org/abs/2512.00255",
+      "one_line": "疎視点RGBから全身動的人物を単一パスでリライトするRelightNet",
+      "problem": "高品質な全身ダイナミック人体のリライト&自由視点描画はOLAT基底取得・生成に依存し計算高コスト。疎視点RGBからのリアルタイム・高忠実リライトは未解決。",
+      "contribution": "(1) 疎視点RGB入力で全身高ダイナミック人物を再ライティング可能にする初の人物特化法、(2) Transformer-based RelightNetが単一順伝播でリライト外観を予測、(3) ランダム環境マップ+一様照明交互撮影の新規ライトステージ収集戦略、(4) メッシュプロキシ由来の物理情報特徴を活用。",
+      "idea": "古典的OLAT基底生成を回避し、物理ベース(幾何・アルベド・シェーディング・仮想視点)特徴をTransformerに投入することで、単一パスで任意照明下の外観を推論。撮影中はランダム照明と一様照明フレームを交互に取得し動き追跡と照明多様性を両立。",
+      "key_figures": "RelightNetのTransformerアーキテクチャ、ライトステージ撮影プロトコル、リライト結果と新規視点合成の比較。",
+      "evaluation": "新規データセットで自由視点リライトをPSNR/SSIM/LPIPSで評価し、OLAT-basisベースラインや既存ニューラルリライト手法に優越。",
+      "future_work": "複数人インタラクション、衣服・髪の高周波要素のさらなる強化、テレプレゼンスシステム実装。",
+      "related_work": "Holoported Characters (Pang+ 2023)、Relightable Avatars、Light Stage (Debevec+)、Neural Free-viewpoint Relighting。",
+      "note": "MPI Informatics系。CVPR 2026 Oral。テレプレゼンス/メタバースの基盤技術。"
+    },
+    "award-sunday-learning-eigenstructures-of": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.01103",
+      "one_line": "メッシュ・離散化不要で任意多様体のスペクトル基底を直接学習する枠組み",
+      "problem": "形状・多様体解析では微分作用素を選び離散化しeigensolverで固有関数を得るのが古典的だが、点群やメッシュなし高次元データでは適用困難。データ依存のスペクトル基底学習が必要。",
+      "contribution": "(1) 教師なし・離散化なしで任意多様体のスペクトル基底を学習する初の枠組み、(2) 暗黙近似作用素のプローブ関数分布における再構成誤差を最小化する目的関数、(3) メッシュ次元仮定なしで任意次元データに適用可能、(4) 3D点群・高次元画像多様体で意味のある基底を学習。",
+      "idea": "プローブ関数の集合に対し、学習基底でNetworkが推定する暗黙近似作用素の再構成誤差を最小化することで、固有関数を陽に持たない作用素から直接スペクトル基底を抽出する。",
+      "key_figures": "学習スペクトル基底の可視化(Laplacian固有関数との類似)、3D点群と高次元画像多様体への適用例、再構成誤差の収束プロット。",
+      "evaluation": "3D表面点群と高次元画像多様体上で、明示的作用素構築なしに古典Laplacian固有関数に類似した基底を学習可能であることを実証。",
+      "future_work": "形状対応、メッシュフリー幾何処理、生成モデルへの組み込み、より大規模高次元データへの適用。",
+      "related_work": "Laplace-Beltrami spectral methods、Diffusion maps、Manifold learning (ISOMAP/LLE)、Neural diffusion operator。",
+      "note": "Technion×TU Munich(Cremers, Kimmel他)。CVPR 2026 Oral。"
+    },
+    "award-sunday-mapping-networks": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2602.19134",
+      "one_line": "ネットワーク重み空間が低次元領域に収まるという観点から汎用Mapping Networksを提案",
+      "problem": "ニューラルネットの学習済み重みは高次元空間に存在するが、実効的な多様体次元やマッピング構造の理解は限定的。重み空間の幾何学を活用したアーキテクチャ汎用化が望まれる。",
+      "contribution": "(1) 重み空間が低次元領域に実効的に存在することを示すMapping Networks枠組み、(2) その低次元構造を活用するための学習手順、(3) 複数視覚タスクでの一貫した精度向上、(4) アーキテクチャ非依存のプラグイン構成。",
+      "idea": "ネットワーク重みを低次元潜在から生成するハイパーネット的マッピングを学習し、有効自由度を制約することで汎化と効率を向上させる。重み多様体の幾何学を直接モデル化。",
+      "key_figures": "重み空間の低次元埋め込み可視化、Mapping Networksのアーキテクチャ図、複数タスクでの精度・パラメータ効率比較。",
+      "evaluation": "複数の視覚タスクで標準アーキテクチャに対する一貫した精度・効率改善を実証。重み空間の有効次元の計測。",
+      "future_work": "大規模基盤モデルへの拡張、連続学習・転移学習との結合、理論解析の深化。",
+      "related_work": "HyperNetworks (Ha+)、Intrinsic dimension of weight space (Li+)、INR系、Geometric deep learning。",
+      "note": "CVPR 2026 Oral。タイトルが短く解釈は推定を含む。"
+    },
+    "award-sunday-cinebrain-a-large-scale-mul": {
+      "rating": 4,
+      "arxiv_url": "https://arxiv.org/abs/2503.06940",
+      "one_line": "fMRI+EEG同時計測の6時間ナラティブ脳データと動画再構成枠組みCineSync",
+      "problem": "脳信号からの動画再構成はモダリティ単独(fMRIまたはEEG)で行われ、各々の空間/時間解像度の限界を補えない。長時間ナラティブ刺激下のマルチモーダル脳データも公開されていない。",
+      "contribution": "(1) fMRI+EEG同期計測の初のナラティブ視聴データセットCineBrain(6人×6時間Big Bang Theory)、(2) 連続動画刺激再構成の新タスク、(3) Multi-Modal Fusion EncoderとNeural Latent DecoderからなるCineSync枠組み、(4) Cine-Benchmark評価プロトコル。",
+      "idea": "fMRIの空間情報とEEGの時間情報を融合エンコーダで統合し、潜在空間で映像生成モデルにマッピング。長時間ナラティブで脳の意味処理を捉える。",
+      "key_figures": "CineBrain計測セットアップとデータ規模図、CineSyncのMulti-Modal Fusion EncoderとNeural Latent Decoderのパイプライン、再構成動画フレーム比較。",
+      "evaluation": "Cine-Benchmarkで意味・知覚両次元で評価しSOTAを達成。fMRIまたはEEG単独より融合が一貫して優越することを実証。",
+      "future_work": "より多人数・多刺激への拡張、リアルタイム化、感情・意図など高次認知の復号。",
+      "related_work": "MindEye/MindVis (fMRI→画像)、NSD、Brain2Music、MindCine(EEG→動画)。",
+      "note": "CVPR 2026 Oral。Brain Decoding研究の新しいマイルストーン。"
+    },
+    "award-sunday-hearing-the-room-through-th": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "ドラム形状の振動モードを手がかりに部屋音場・形状を復元するモーダルガイド推定",
+      "problem": "音響信号から部屋形状や音源/物体形状を推定する逆問題は、室内反射や物体振動モードの結合が複雑で、自由形状ドラム/部屋の同時推定はほぼ未解決。",
+      "contribution": "(1) ドラム振動モードを物理事前情報として用いるモーダルガイド型音響推定枠組み、(2) 室内インパルス応答と物体モードから部屋・物体形状を同時復元、(3) 物理ベース合成データと実測データでの検証、(4) 既存音響形状推定を上回る精度。",
+      "idea": "Kacの「ドラムの形は聞き取れるか」問題を発展させ、物体の自由振動モード(固有周波数)を陽に予測しつつ、部屋のIRからの反射構造とジョイントで最適化する。",
+      "key_figures": "モーダル分解パイプライン図、ドラム・部屋の幾何推定例、合成・実音響での誤差比較。",
+      "evaluation": "合成および実音響データセットで部屋・物体形状推定精度を評価し、純粋に幾何のみに依存する手法に対し一貫した優位を示す。",
+      "future_work": "より複雑な家具配置・複数物体への拡張、能動的「叩き」位置選択戦略、ロボット応用。",
+      "related_work": "Kac (1966)、wav2shape、Hearing the shape of a cuboid room、A drone can hear the shape of a room。",
+      "note": "arXiv未確認。タイトルと近接研究から内容推定。CVPR 2026 Oral。"
+    },
+    "award-sunday-thinking-with-drafts-specul": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2512.00805",
+      "one_line": "軽量draft MLLMが投機的にフレーム探索し主MLLMが検証する長尺動画推論",
+      "problem": "thinking-with-framesパラダイムは長尺動画推論で性能を高めるが、フレーム数増加に伴いマルチモーダル文脈が冗長膨張し、推論コストが線形以上に増大する。",
+      "contribution": "(1) 強化学習ベースの投機的時間推論枠組みSpecTemp、(2) 軽量draft MLLMによる高速顕在フレーム提案、(3) 強力なtarget MLLMによる時間推論と検証、(4) 長尺動画ベンチで効率と精度を両立。",
+      "idea": "LLM推論のSpeculative Decodingに着想を得て、軽量モデルがフレーム候補を素早く提案し、重いモデルが時間推論で検証・採用/棄却する。RLでdraftとtargetを協調学習。",
+      "key_figures": "draft-target協調アーキテクチャ図、思考トークン長と精度のトレードオフ曲線、フレーム選択可視化。",
+      "evaluation": "LongVideoBench/MLVU等の長尺動画ベンチで、既存thinking-with-frames手法と比較し計算量を抑制しつつ精度を維持・向上。",
+      "future_work": "音声・字幕を含むマルチモーダル投機推論、オンライン動画ストリームへの拡張、エージェント的ツール呼び出しとの統合。",
+      "related_work": "Thinking with Long Videos/LongVT、VideoTemp-o3、VTimeCoT、Speculative Decoding (Leviathan+)。",
+      "note": "CVPR 2026 Oral。長尺動画理解の効率化の重要方向。"
+    },
+    "award-sunday-dual-level-adapter-boosting": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2504.04034",
+      "one_line": "SAMにSparse Adapter+FFTプロンプト生成を統合した汎用曲線構造セグメンテーション",
+      "problem": "曲線構造セグメンテーション(血管・道路・神経等)はドメイン固有設計が必要でクロスドメイン汎化が困難。SAMの強い汎化能を活用しつつ手動プロンプトに依存しない構成が求められる。",
+      "contribution": "(1) SAMをCSSタスクに適応させるUCS(Universal Curvilinear structure Segmentation)、(2) Sparse Adapterで最小パラメータでクロスドメイン汎化、(3) FFT高域通過フィルタによる曲線特化プロンプト生成、(4) 二重圧縮(階層特徴+ガイダンス)マスクデコーダによるプロンプトフリー化。",
+      "idea": "SAMエンコーダはFreezeしSparse Adapterで局所的に適応、曲線らしさを周波数領域(高周波成分)で検出してプロンプトに変換、Dual-level圧縮で粗から細へ統合する。",
+      "key_figures": "UCS全体アーキテクチャ、Sparse AdapterとFFT-promptモジュール、複数ドメイン(血管/道路/亀裂等)定性比較。",
+      "evaluation": "血管・道路・亀裂等の複数CSSベンチでSOTAを達成し、ドメイン汎化(zero-/few-shot)で既存SAM適応手法を上回る。",
+      "future_work": "3D曲線構造への拡張、トポロジー制約(連結性)の明示的組み込み、より大規模な医療応用。",
+      "related_work": "SAM (Kirillov+)、SAM4EM、CS2-Net、DSCNet、SegMamba。",
+      "note": "CVPR 2026 Oral。Dual-level Adapterは本論文のSparse Adapter+Mask decoderの二重構造を指す。"
+    },
+    "award-sunday-medic-ad-towards-medical-vi": {
+      "rating": 4,
+      "arxiv_url": "https://arxiv.org/abs/2603.27176",
+      "one_line": "異常認識トークン+差分トークンで病変検出と進行追跡を統合する医療VLM",
+      "problem": "医療VLMは一般物体VLMの枠組みを流用しがちで、病変検出・症状の時系列変化追跡・可視説明性といった臨床ワークフロー固有要件を満たさない。",
+      "contribution": "(1) 段階的医療VLM枠組みMedic-AD、(2) 異常領域に注意を集中させる学習可能anomaly-aware token、(3) 異なる検査間の差分を符号化するinter-image difference token、(4) 病変領域ヒートマップを生成する説明性ステージ。",
+      "idea": "VLMトークン語彙に医療特化の異常・差分トークンを追加し、段階的に学習する。最終段階で病変ヒートマップを明示生成し、臨床意思決定支援の説明可能性を担保。",
+      "key_figures": "Medic-ADの段階的アーキテクチャ、anomaly/difference tokenの可視化、GPT-4o/Claudeとの病変検出/時系列推論比較。",
+      "evaluation": "実臨床縦断データで病変検出・時系列症状推論・空間グラウンディング説明性を評価。GPT-4o、Claude、医療基盤モデル、異常特化モデルを上回り安定した臨床予測。",
+      "future_work": "マルチモダリティ(CT/MR/病理)横断、エージェント的診療プロセス、規制対応(FDA等)。",
+      "related_work": "LLaVA-Med、Med-Flamingo、CheXagent、RadFM、CLIP系医療VLM。",
+      "note": "Seoul National Univ.×Samsung Medical×NVIDIA。CVPR 2026 Oral。実臨床ワークフロー指向。"
+    },
+    "award-sunday-efficient-unrolled-networks": {
+      "rating": 3,
+      "arxiv_url": "https://arxiv.org/abs/2601.02141",
+      "one_line": "ドメイン分割と正規作用素近似で大規模3D逆問題を単一GPUで展開学習",
+      "problem": "展開ネット(deep unrolling)はSOTA再構成性能を持つが、3Dコーンビーム/3D MRIなど大規模問題ではフォワード作用素のメモリ要求が膨大で、エンドツーエンド学習が不可能に近い。",
+      "contribution": "(1) ドメイン分割戦略と正規作用素近似でメモリ要件を劇的に削減、(2) 任意規模のフォワード作用素を組み込んだunrolled networkを単一GPUで学習可能、(3) 3D X-ray cone-beam CTと3Dマルチコイル加速MRIでSOTA、(4) 推論も単一GPUで可能。",
+      "idea": "巨大フォワード作用素を空間分割しサブドメインごとに勾配計算、さらに正規作用素A^T Aの近似でAdjointの呼び出し回数を削減することで、メモリと計算量を抑制しつつ展開学習の利点を享受。",
+      "key_figures": "ドメイン分割の概念図、メモリ・計算量とサブドメイン数の関係、3D CT/MRIでの再構成画像と既存法比較。",
+      "evaluation": "3Dコーンビーム CTと3D多コイル加速MRIでSOTA再構成精度を達成。単一GPU(学習・推論)。",
+      "future_work": "より一般の3D/4D逆問題、産業/科学計測への応用、physics-informed学習との統合。",
+      "related_work": "Deep unrolling (LISTA系)、Operator sketching、Stochastic primal-dual unrolling、MoDL/Variational Networks。",
+      "note": "CNRS×ENS Lyon (Vo, Tachella)。CVPR 2026 Oral。大規模計算イメージングへの実用ブレイクスルー。"
+    },
+    "award-sunday-fedadamom-adaptive-momentum": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "適応モーメンタムで連合学習の汎化を改善するFedAdamomオプティマイザ",
+      "problem": "連合学習(FL)ではクライアント分布の非IID性により従来Adam系の適応モーメンタムが汎化を損ねる。FedAvgでは収束速度・汎化のバランスが取りづらく、過剰適応とドリフトが課題。",
+      "contribution": "(1) 連合最適化向けにモーメンタムを適応的に調整するFedAdamom、(2) クライアント・サーバ両側でのモーメンタム正則化、(3) 汎化の理論解析と収束保証、(4) CIFAR/ImageNetなど画像分類で既存FedAdam/FedAvg/FedAdamWを上回る精度。",
+      "idea": "ローカル勾配の分散とドリフトを推定し、それに応じてサーバ・クライアントのモーメンタム係数を動的に調整。過剰適応を抑え汎化を改善。",
+      "key_figures": "FedAdamomの更新式と擬似コード、収束カーブ比較、非IID度別の精度向上。",
+      "evaluation": "標準FLベンチ(CIFAR-10/100, FEMNIST, ImageNet系)でFedAvg, FedAdam, FedAdamW, FedYogiを上回る精度と収束速度を実証。",
+      "future_work": "LLM等大規模モデルへのスケール、プライバシ保護(DP)との統合、異種クライアントへの拡張。",
+      "related_work": "Adaptive Federated Optimization (FedAdam/FedYogi)、FedAdamW、FedAdam-SSM、FedProx。",
+      "note": "arXiv未確認。タイトル・セッションから内容推定。CVPR 2026 Oral。"
+    },
+    "award-sunday-texvent-asynchronous-event": {
+      "rating": 3,
+      "arxiv_url": null,
+      "one_line": "テキストプロンプトから非同期イベントカメラデータを直接生成するシミュレータ",
+      "problem": "イベントカメラは高ダイナミックレンジ・低遅延だが学習データが乏しい。既存シミュレータは動画フレームからの変換が中心で、テキスト記述からの直接生成は未確立。中間RGB生成のコストも問題。",
+      "contribution": "(1) テキストプロンプトから非同期イベント列を直接生成する初の枠組みTexvent、(2) 中間RGB生成を介さない条件付きイベント生成モデル、(3) 物理的なイベントノイズ・極性分布の忠実再現、(4) 下流タスク(認識・トラッキング)での合成データ有効性を実証。",
+      "idea": "テキスト→イベント時空間ボリュームへの条件付き生成を、拡散ベース or トランスフォーマで学習。非同期スパイク分布を直接モデル化することで現実的なイベントストリームを得る。",
+      "key_figures": "Texvent全体アーキテクチャ、生成イベント可視化(時空間プロット)、合成データで学習した下流タスク性能比較。",
+      "evaluation": "イベントベース認識・トラッキングタスクで、Texvent生成データを学習に用いることでReal-Eventベンチの精度向上を確認。既存ビデオ→イベント・シミュレータより自然な分布。",
+      "future_work": "より長期・複雑シーン、ロボット制御データ生成、real-eventとの混合学習レシピ。",
+      "related_work": "Text-to-Events、ESIM、V2E、ADV2E、EventGAN。",
+      "note": "arXiv未確認。タイトル・近接研究から内容推定。CVPR 2026 Oral。"
     }
+  },
+  "awards": {
+    "friday": [
+      {
+        "key": "award-friday-a-style-is-worth-one-code-u",
+        "title": "A Style is Worth One Code: Unlocking Code-to-Style Image Generation with Discrete Style Space",
+        "authors": [
+          "Huijie Liu",
+          "Shuhao Cui",
+          "Haoxiang Cao",
+          "Shuai Ma",
+          "Kai Wu",
+          "Guoliang Kang"
+        ],
+        "session_ids": [
+          "oral-1A",
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-1A",
+        "poster_id": 1,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-adversarial-style-optimizat",
+        "title": "Adversarial Style Optimization: Enhancing VLM Jailbreaks by GRPO- b\u0007ased Stylistic Triggers Optimization",
+        "authors": [
+          "Bingjun Luo",
+          "Jialin Guo",
+          "Yue Yao",
+          "Xinpeng Ding"
+        ],
+        "session_ids": [
+          "oral-1A"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-1A"
+      },
+      {
+        "key": "award-friday-vit3-unlocking-test-time-tr",
+        "title": "ViT^3: Unlocking Test-Time Training in Vision",
+        "authors": [
+          "Dongchen Han",
+          "Y\u0007ining Li",
+          "Tianyu Li",
+          "Zixuan Cao",
+          "Ziming Wang",
+          "Jun Song",
+          "Yu Cheng",
+          "Bo Zheng",
+          "Gao Huang"
+        ],
+        "session_ids": [
+          "oral-1A"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-1A"
+      },
+      {
+        "key": "award-friday-black-box-membership-infere",
+        "title": "Black-box Membership Inference Attacks on the Pre-training Data of Image-generation Models",
+        "authors": [
+          "Tao Qi",
+          "Huili Wang",
+          "Yuanhong Huang",
+          "Wendan Wang",
+          "Lianchao Zhao",
+          "Jinrui Wang",
+          "Zichen Qin",
+          "Shangguang Wang",
+          "Yongfeng Huang"
+        ],
+        "session_ids": [
+          "oral-1B",
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-1B",
+        "poster_id": 7,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-data-leakage-detection-and",
+        "title": "Data Leakage Detection and De-duplication in Large Scale Geospatial I\u0007mage Datasets",
+        "authors": [
+          "Yeshwanth Kumar Adimoolam",
+          "Charalambos Poullis",
+          "Melinos Averkiou"
+        ],
+        "session_ids": [
+          "oral-1B"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-1B"
+      },
+      {
+        "key": "award-friday-ldp-slicing-local-different",
+        "title": "LDP-Slicing: Local Differential Privacy for Images via Randomized Bit-Plane Slicing",
+        "authors": [
+          "Yuanming Cao",
+          "Chengqi Li",
+          "Wenbo He"
+        ],
+        "session_ids": [
+          "oral-1B",
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-1B",
+        "poster_id": 10,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-revisiting-geometric-obfusc",
+        "title": "Revisiting Geometric Obfuscation with Dual Convergent Lines for P\u0007rivacy-Preserving Image Queries in Visual Localization",
+        "authors": [
+          "Jeonggon Kim",
+          "Heejoon Moon",
+          "Je Hyeong Hong"
+        ],
+        "session_ids": [
+          "oral-1B"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-1B"
+      },
+      {
+        "key": "award-friday-nuwa-deriving-lightweight-c",
+        "title": "NuWa: Deriving Lightweight Class-Specific Vision Transformers for E\u0007dge Devices",
+        "authors": [
+          "Ziteng Wei",
+          "Qiang He",
+          "Bing Li",
+          "Feifei Chen",
+          "Hai Jin",
+          "Yun Yang"
+        ],
+        "session_ids": [
+          "oral-1C"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-1C"
+      },
+      {
+        "key": "award-friday-plant-taxonomy-meets-plant",
+        "title": "Plant Taxonomy Meets Plant Counting: A Fine-Grained, Taxonomic D\u0007ataset for Counting Hundreds of Plant Species",
+        "authors": [
+          "Jinyu Xu",
+          "Tianqi Hu",
+          "Xiaonan Hu",
+          "Letian Zhou",
+          "Songliang Cao",
+          "Meng Zhang",
+          "Hao Lu"
+        ],
+        "session_ids": [
+          "oral-1C"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-1C"
+      },
+      {
+        "key": "award-friday-rethinking-dataset-distilla",
+        "title": "Rethinking Dataset Distillation: Hard Truths about Soft Labels",
+        "authors": [
+          "P\u0007riyam Dey",
+          "Aditya Sahdev",
+          "Sunny Bhati",
+          "Konda Reddy Mopuri",
+          "Venkatesh Babu Radhakrishnan"
+        ],
+        "session_ids": [
+          "oral-1C",
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-1C",
+        "poster_id": 18,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-customized-fusion-a-closed",
+        "title": "Customized Fusion: A Closed-Loop Dynamic Network for Adaptive M\u0007ulti-Task-Aware Infrared-Visible Image Fusion",
+        "authors": [
+          "Zengyi Yang",
+          "Yu Liu",
+          "Juan Cheng",
+          "Zhiqin Zhu",
+          "Yafei Zhang",
+          "Huafeng Li"
+        ],
+        "session_ids": [
+          "oral-1D"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-1D"
+      },
+      {
+        "key": "award-friday-dual-band-thermal-videograp",
+        "title": "Dual Band Thermal Videography: Separating Time-Varying Reflection a\u0007nd Emission Near Ambient Conditions",
+        "authors": [
+          "Sriram Narayanan",
+          "Mani Ramanagopal",
+          "Srinivasa Narasimhan"
+        ],
+        "session_ids": [
+          "oral-1D"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-1D"
+      },
+      {
+        "key": "award-friday-metaspectra-a-compact-broad",
+        "title": "MetaSpectra+: A Compact Broadband Metasurface Camera for S\u0007napshot Hyperspectral+ Imaging",
+        "authors": [
+          "Yuxuan Liu",
+          "Wei Xu",
+          "Qi Guo"
+        ],
+        "session_ids": [
+          "oral-1D"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-1D"
+      },
+      {
+        "key": "award-friday-towards-photorealistic-and",
+        "title": "Towards Photorealistic and Efficient Bokeh Rendering via Diffusion F\u0007ramework",
+        "authors": [
+          "Linxiao Shi",
+          "Siming Zheng",
+          "Zerong Wang",
+          "Hao Zhang",
+          "Jinwei Chen",
+          "Bo Li",
+          "Shifeng Chen",
+          "Peng-Tao Jiang"
+        ],
+        "session_ids": [
+          "oral-1D"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-1D"
+      },
+      {
+        "key": "award-friday-unreflectanything-rgb-only",
+        "title": "UnReflectAnything: RGB-Only Highlight Removal by Rendering S\u0007ynthetic Specular Supervision",
+        "authors": [
+          "Alberto Rota",
+          "Mert Kiray",
+          "Mert Asim Karaoglu",
+          "Patrick Ruhkamp",
+          "Elena De Momi",
+          "Nassir Navab",
+          "Benjamin Busam"
+        ],
+        "session_ids": [
+          "oral-1D"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-1D"
+      },
+      {
+        "key": "award-friday-mamma-markerless-accurate-m",
+        "title": "MAMMA: Markerless Accurate Multi-person Motion Acquisition",
+        "authors": [
+          "Hanz Cuevas Velasquez",
+          "Anastasios Yiannakidis",
+          "Soyong Shin",
+          "Giorgio Becherini",
+          "Markus Höschle",
+          "Joachim Tesch",
+          "Taylor Obersat",
+          "Tsvetelina Alexiadis",
+          "Eni Halilaj",
+          "Michael J. Black"
+        ],
+        "session_ids": [
+          "oral-2A",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-2A",
+        "poster_id": 1,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-natural-human-motion-recove",
+        "title": "Natural Human Motion Recovery by Aligning High-Order Temporal Dynamics from Monocular Videos",
+        "authors": [
+          "Dingkun Wei",
+          "Zehong Shen",
+          "Yan Xia",
+          "Georgios Pavlakos",
+          "Yujun Shen",
+          "Xiaowei Zhou"
+        ],
+        "session_ids": [
+          "oral-2A",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-2A",
+        "poster_id": 2,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-sam-3d-body-robust-full-bod",
+        "title": "SAM 3D Body: Robust Full-Body Human Mesh Recovery",
+        "authors": [
+          "Xitong Yang",
+          "Devansh Kukreja",
+          "Don Pinkus",
+          "Taosha Fan",
+          "Jinhyung Park",
+          "Soyong Shin",
+          "Jinkun Cao",
+          "Jia-Wei Liu",
+          "Nicolás Ugrinovic",
+          "Anushka Sagar",
+          "Jitendra Malik",
+          "Matt Feiszli",
+          "Piotr Dollár",
+          "Kris Kitani"
+        ],
+        "session_ids": [
+          "oral-2A",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-2A",
+        "poster_id": 4,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-sam-3d-3dfy-anything-in-ima",
+        "title": "SAM 3D: 3Dfy Anything in Images, Xingyu Chen, FU-JEN CHU",
+        "authors": [
+          "Pierre Gleize",
+          "Kevin J Liang",
+          "Alexander Sax",
+          "Hao Tang",
+          "Weiyao Wang",
+          "Michelle Guo",
+          "Thibaut Hardin",
+          "Xiang Li",
+          "Aohan Lin",
+          "Jia-Wei Liu",
+          "Ziqi Ma",
+          "Anushka Sagar",
+          "Bowen Song",
+          "Xiaodong Wang",
+          "Jianing Yang",
+          "Bowen Zhang",
+          "Piotr Dollár",
+          "Georgia Gkioxari",
+          "Matt Feiszli",
+          "Jitendra Malik"
+        ],
+        "session_ids": [
+          "oral-2A"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-2A"
+      },
+      {
+        "key": "award-friday-3dreflecnet-a-large-scale-d",
+        "title": "3DReflecNet: A Large-Scale Dataset for 3D Reconstruction of Reflective, Transparent, and Low-Texture Objects",
+        "authors": [
+          "Zhicheng Liang",
+          "Haoyi Yu",
+          "Boyan Li",
+          "Dayou Zhang",
+          "Zijian Cao",
+          "Tianyi Gong",
+          "Junhua Liu",
+          "Shuguang Cui",
+          "Fangxin Wang"
+        ],
+        "session_ids": [
+          "oral-2B",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-2B",
+        "poster_id": 7,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-glint-modeling-scene-scale",
+        "title": "GLINT: Modeling Scene-Scale Transparency via Gaussian Radiance Transport",
+        "authors": [
+          "Youngju Na",
+          "Jaeseong Yun",
+          "Soohyun Ryu",
+          "Hyunsu Kim",
+          "Sung- Eui Yoon",
+          "Suyong Yeon"
+        ],
+        "session_ids": [
+          "oral-2B",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-2B",
+        "poster_id": 8,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-phygap-physically-grounded",
+        "title": "PhyGaP: Physically-Grounded Gaussians with Polarization Cues",
+        "authors": [
+          "Jiale Wu",
+          "Xiaoyang Bai",
+          "Zongqi He",
+          "Weiwei Xu",
+          "Yifan Peng"
+        ],
+        "session_ids": [
+          "oral-2B",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-2B",
+        "poster_id": 10,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-seegroup-multi-layer-depth",
+        "title": "SeeGroup: Multi-Layer Depth Estimation of Transparent Surfaces via Self-Determined Grouping",
+        "authors": [
+          "Hongyu Wen",
+          "Jia Deng"
+        ],
+        "session_ids": [
+          "oral-2B",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-2B",
+        "poster_id": 12,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-proxy-gs-unified-occlusion",
+        "title": "Proxy-GS: Unified Occlusion Priors for Training and Inference in Structured 3D Gaussian Splatting",
+        "authors": [
+          "Yuanyuan Gao",
+          "Yuning Gong",
+          "Yifei Liu",
+          "Jingfeng Li",
+          "Dan Xu",
+          "Yanci Zhang",
+          "Dingwen Zhang",
+          "Xiao Sun",
+          "Zhihang Zhong"
+        ],
+        "session_ids": [
+          "oral-2C"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-2C"
+      },
+      {
+        "key": "award-friday-efficiently-reconstructing",
+        "title": "Efficiently Reconstructing Dynamic Scenes One D4RT at a Time, Chuhan Zhang, Guillaume Le Moing, Skanda Koppula, Ignacio Rocco, Liliane Momeni, Junyu Xie, Shuyang Sun, Rahul Sukthankar, Joëlle K. Barral, Raia Hadsell, Zoubin Ghahramani, Andrew Zisserman, Junlin Zhang, Mehdi S. M. Sajjadi",
+        "authors": [],
+        "session_ids": [
+          "oral-2D",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-2D",
+        "poster_id": 20,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-fuser-feed-forward-multivie",
+        "title": "FUSER: Feed-Forward Multiview 3D Registration Transformer and SE(3)^N Diffusion Refinement",
+        "authors": [
+          "Haobo Jiang",
+          "Jin Xie",
+          "Jian Yang",
+          "Liang Yu",
+          "Jianmin Zheng"
+        ],
+        "session_ids": [
+          "oral-2D",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-2D",
+        "poster_id": 21,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-residual-primitive-fitting",
+        "title": "Residual Primitive Fitting of 3D Shapes with SuperFrusta",
+        "authors": [
+          "Aditya Ganeshan",
+          "Matheus Gadelha",
+          "Thibault Groueix",
+          "Zhiqin Chen",
+          "Siddhartha Chaudhuri",
+          "Vladimir Kim",
+          "Wang Yifan",
+          "Daniel Ritchie"
+        ],
+        "session_ids": [
+          "oral-2D",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-2D",
+        "poster_id": 22,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-smokesvd-smoke-reconstruct",
+        "title": "SmokeSVD: Smoke Reconstruction from A Single View via Progressive Novel View Synthesis and Refinement with Diffusion Models",
+        "authors": [
+          "Chen Li",
+          "Shanshan Dong",
+          "Sheng Qiu",
+          "Jianmin Han",
+          "Yibo Zhao",
+          "Zan Gao",
+          "Taku Komura",
+          "Kemeng Huang"
+        ],
+        "session_ids": [
+          "oral-2D",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-2D",
+        "poster_id": 23,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-sparseworld-tc-trajectory",
+        "title": "SparseWorld-TC: Trajectory-Conditioned Sparse Occupancy World Model",
+        "authors": [
+          "Jiayuan Du",
+          "Yiming Zhao",
+          "Zhenglong Guo",
+          "Yong Pan",
+          "Wenbo Hou",
+          "Zhihui Hao",
+          "Kun Zhan",
+          "Qijun Chen"
+        ],
+        "session_ids": [
+          "oral-2D",
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-2D",
+        "poster_id": 24,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-adversarial-style-optimizat",
+        "title": "Adversarial Style Optimization: Enhancing VLM Jailbreaks by GRPO- based Stylistic Triggers Optimization",
+        "authors": [
+          "Bingjun Luo",
+          "Jialin Guo",
+          "Yue Yao",
+          "Xinpeng Ding"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 2,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-sam-3d-3dfy-anything-in-ima",
+        "title": "SAM 3D: 3Dfy Anything in Images",
+        "authors": [
+          "Xingyu Chen",
+          "Fu-Jen Chu",
+          "Pierre Gleize",
+          "Kevin J Liang",
+          "Alexander Sax",
+          "Hao Tang",
+          "Weiyao Wang",
+          "Michelle Guo",
+          "Thibaut Hardin",
+          "Xiang Li",
+          "Aohan Lin",
+          "Jia-Wei Liu",
+          "Ziqi Ma",
+          "Anushka Sagar",
+          "Bowen Song",
+          "Xiaodong Wang",
+          "Jianing Yang",
+          "Bowen Zhang",
+          "Piotr Dollár",
+          "Georgia Gkioxari",
+          "Matt Feiszli",
+          "Jitendra Malik"
+        ],
+        "session_ids": [
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "poster_id": 5,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-vit3-unlocking-test-time-tr",
+        "title": "ViT3: Unlocking Test-Time Training in Vision",
+        "authors": [
+          "Dongchen Han",
+          "Yining Li",
+          "Tianyu Li",
+          "Zixuan Cao",
+          "Ziming Wang",
+          "Jun Song",
+          "Yu Cheng",
+          "Bo Zheng",
+          "Gao Huang"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 6,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-data-leakage-detection-and",
+        "title": "Data Leakage Detection and De-duplication in Large Scale Geospatial Image Datasets",
+        "authors": [
+          "Yeshwanth Kumar Adimoolam",
+          "Charalambos Poullis",
+          "Melinos Averkiou"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 8,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-revisiting-geometric-obfusc",
+        "title": "Revisiting Geometric Obfuscation with Dual Convergent Lines for Privacy-Preserving Image Queries in Visual Localization",
+        "authors": [
+          "Jeonggon Kim",
+          "Heejoon Moon",
+          "Je Hyeong Hong"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 12,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-proxy-gs-unified-occlusion",
+        "title": "Proxy-GS: Unified Occlusion Priors forTraining and Inference in Structured 3D Gaussian Splatting",
+        "authors": [
+          "Yuanyuan Gao",
+          "Yuning Gong",
+          "Yifei Liu",
+          "Jingfeng Li",
+          "Dan Xu",
+          "Yanci Zhang",
+          "Dingwen Zhang",
+          "Xiao Sun",
+          "Zhihang Zhong"
+        ],
+        "session_ids": [
+          "poster-2"
+        ],
+        "is_highlight": false,
+        "poster_id": 15,
+        "poster_session": "poster-2"
+      },
+      {
+        "key": "award-friday-nuwa-deriving-lightweight-c",
+        "title": "NuWa: Deriving Lightweight Class-Specific Vision Transformers for Edge Devices",
+        "authors": [
+          "Ziteng Wei",
+          "Qiang He",
+          "Bing Li",
+          "Feifei Chen",
+          "Hai Jin",
+          "Yun Yang"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 16,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-plant-taxonomy-meets-plant",
+        "title": "Plant Taxonomy Meets Plant Counting: A Fine-Grained, Taxonomic Dataset for Counting Hundreds of Plant Species",
+        "authors": [
+          "Jinyu Xu",
+          "Tianqi Hu",
+          "Xiaonan Hu",
+          "Letian Zhou",
+          "Songliang Cao",
+          "Meng Zhang",
+          "Hao Lu"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 17,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-customized-fusion-a-closed",
+        "title": "Customized Fusion: A Closed-Loop Dynamic Network for Adaptive Multi-Task-Aware Infrared-Visible Image Fusion",
+        "authors": [
+          "Zengyi Yang",
+          "Yu Liu",
+          "Juan Cheng",
+          "Zhiqin Zhu",
+          "Yafei Zhang",
+          "Huafeng Li"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 19,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-dual-band-thermal-videograp",
+        "title": "Dual Band Thermal Videography: Separating Time-Varying Reflection and Emission Near Ambient Conditions",
+        "authors": [
+          "Sriram Narayanan",
+          "Mani Ramanagopal",
+          "Srinivasa Narasimhan"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 20,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-metaspectra-a-compact-broad",
+        "title": "MetaSpectra+: A Compact Broadband Metasurface Camera for Snapshot Hyperspectral+ Imaging",
+        "authors": [
+          "Yuxuan Liu",
+          "Wei Xu",
+          "Qi Guo"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 21,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-towards-photorealistic-and",
+        "title": "Towards Photorealistic and Efficient Bokeh Rendering via Diffusion Framework",
+        "authors": [
+          "Linxiao Shi",
+          "Siming Zheng",
+          "Zerong Wang",
+          "Hao Zhang",
+          "Jinwei Chen",
+          "Bo Li",
+          "Shifeng Chen",
+          "Peng-Tao Jiang"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 23,
+        "poster_session": "poster-1"
+      },
+      {
+        "key": "award-friday-unreflectanything-rgb-only",
+        "title": "UnReflectAnything: RGB-Only Highlight Removal by Rendering Synthetic Specular Supervision",
+        "authors": [
+          "Alberto Rota",
+          "Mert Kiray",
+          "Mert Asim Karaoglu",
+          "Patrick Ruhkamp",
+          "Elena De Momi",
+          "Nassir Navab",
+          "Benjamin Busam"
+        ],
+        "session_ids": [
+          "poster-1"
+        ],
+        "is_highlight": false,
+        "poster_id": 24,
+        "poster_session": "poster-1"
+      }
+    ],
+    "saturday": [
+      {
+        "key": "award-saturday-pixeldit-pixel-diffusion-",
+        "title": "PixelDiT: Pixel Diffusion Transformers for Image Generation",
+        "authors": [
+          "Yongsheng Yu",
+          "Wei Xiong",
+          "Weili Nie",
+          "Yichen Sheng",
+          "Shiqiu Liu",
+          "Jiebo Luo"
+        ],
+        "session_ids": [
+          "oral-3A",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-3A",
+        "poster_id": 3,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-seacache-spectral-evoluti",
+        "title": "SeaCache: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models",
+        "authors": [
+          "Jiwoo Chung",
+          "Sangeek Hyun",
+          "MinKyu Lee",
+          "Byeongju Han",
+          "Geonho Cha",
+          "Dongyoon Wee",
+          "Youngjun Hong",
+          "Jae-Pil Heo"
+        ],
+        "session_ids": [
+          "oral-3A",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-3A",
+        "poster_id": 4,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-compose-a-unified-complet",
+        "title": "ComPose: A Unified Completion-Pose Framework for Robust Category-Level Object Pose Estimation",
+        "authors": [
+          "Huan Ren",
+          "Yihan Chen",
+          "Chuxin Wang",
+          "Nailong Liu",
+          "Wenfei Yang",
+          "Tianzhu Zhang"
+        ],
+        "session_ids": [
+          "oral-3B",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-3B",
+        "poster_id": 7,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-cosmo3d-open-world-prompt",
+        "title": "CoSMo3D: Open-World Promptable 3D Semantic Segmentation through LLM-Guided Canonical Spatial Modeling",
+        "authors": [
+          "Li Jin",
+          "Weikai Chen",
+          "Yujie Wang",
+          "Yingda Yin",
+          "Zeyu Hu",
+          "Runze Zhang",
+          "Keyang Luo",
+          "Shengju Qian",
+          "Xin Wang",
+          "Xueying Qin"
+        ],
+        "session_ids": [
+          "oral-3B",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-3B",
+        "poster_id": 8,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-geovis-geospatially-rewar",
+        "title": "GeoViS: Geospatially Rewarded Visual Search for Remote Sensing Visual Grounding",
+        "authors": [
+          "Peirong Zhang",
+          "Yidan Zhang",
+          "Luxiao Xu",
+          "Jinliang Lin",
+          "Zonghao Guo",
+          "Fengxiang Wang",
+          "Xue Yang",
+          "Kaiwen Wei",
+          "Lei Wang"
+        ],
+        "session_ids": [
+          "oral-3B",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-3B",
+        "poster_id": 9,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-chordedit-one-step-low-en",
+        "title": "ChordEdit: One-Step Low-Energy Transport for Image Editing",
+        "authors": [
+          "Liangsi Lu",
+          "Xuhang Chen",
+          "Minzhe Guo",
+          "Shichu Li",
+          "Jingchao Wang",
+          "Yang Shi"
+        ],
+        "session_ids": [
+          "oral-3C",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-3C",
+        "poster_id": 15,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-native-and-compact-struct",
+        "title": "Native and Compact Structured Latents for 3D Generation",
+        "authors": [
+          "Jianfeng Xiang",
+          "Xiaoxue Chen",
+          "Sicheng Xu",
+          "Ruicheng Wang",
+          "Zelong Lv",
+          "Yu Deng",
+          "Hongyuan Zhu",
+          "Yue Dong",
+          "Hao Zhao",
+          "Nicholas Jing Yuan",
+          "Jiaolong Yang"
+        ],
+        "session_ids": [
+          "oral-3C",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-3C",
+        "poster_id": 17,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-differentiable-vector-qua",
+        "title": "Differentiable Vector Quantization for Rate-Distortion Optimization of Generative Image Compression",
+        "authors": [
+          "Shiyin Jiang",
+          "Wei Long",
+          "Minghao Han",
+          "Zhenghao Chen",
+          "Ce Zhu",
+          "Shuhang Gu"
+        ],
+        "session_ids": [
+          "oral-3D",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-3D",
+        "poster_id": 19,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-finer-mllms-hallucinate-u",
+        "title": "FINER: MLLMs Hallucinate under Fine-grained Negative Queries",
+        "authors": [
+          "Rui Xiao",
+          "Sanghwan Kim",
+          "Yongqin Xian",
+          "Zeynep Akata",
+          "Stephan Alaniz"
+        ],
+        "session_ids": [
+          "oral-3D",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-3D",
+        "poster_id": 20,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-prophy-progressive-physic",
+        "title": "ProPhy: Progressive Physical Alignment for Dynamic World Simulation",
+        "authors": [
+          "Zijun Wang",
+          "Panwen Hu",
+          "Jing Wang",
+          "Terry Jingchen Zhang",
+          "Yuhao Cheng",
+          "Long Chen",
+          "Yiqiang Yan",
+          "Zutao Jiang",
+          "Hanhui Li",
+          "Xiaodan Liang"
+        ],
+        "session_ids": [
+          "oral-3D",
+          "poster-3"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-3D",
+        "poster_id": 24,
+        "poster_session": "poster-3"
+      },
+      {
+        "key": "award-saturday-chorus-multi-teacher-pret",
+        "title": "Chorus: Multi-Teacher Pretraining for Holistic 3D Gaussian Scene Encoding",
+        "authors": [
+          "Yue Li",
+          "Qi Ma",
+          "Runyi Yang",
+          "Mengjiao Ma",
+          "Bin Ren",
+          "Nikola Popovic",
+          "Nicu Sebe",
+          "Theo Gevers",
+          "Luc Van Gool",
+          "Danda Pani Paudel",
+          "Martin R. Oswald"
+        ],
+        "session_ids": [
+          "oral-4A",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-4A",
+        "poster_id": 1,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-linear-fundamental-matrix",
+        "title": "Linear Fundamental Matrix Estimation from 7 or 5 Points",
+        "authors": [
+          "Taci Ata Kucukpinar",
+          "Juan Mogollon",
+          "Joshua Fraser",
+          "Timothy Duff",
+          "Kannappan Palaniappan"
+        ],
+        "session_ids": [
+          "oral-4A",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-4A",
+        "poster_id": 4,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-vggt-",
+        "title": "VGGT-Ω",
+        "authors": [
+          "Jianyuan Wang",
+          "Minghao Chen",
+          "Shangzhan Zhang",
+          "Nikita Karaev",
+          "Johannes Schönberger",
+          "Patrick Labatut",
+          "Piotr Bojanowski",
+          "David Novotny",
+          "Andrea Vedaldi",
+          "Christian Rupprecht"
+        ],
+        "session_ids": [
+          "oral-4A",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-4A",
+        "poster_id": 6,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-nitrogen-an-open-foundati",
+        "title": "NitroGen: An Open Foundation Model for Generalist Gaming Agents",
+        "authors": [
+          "Loïc Magne",
+          "Anas Awadalla",
+          "Guanzhi Wang",
+          "Yinzhen Xu",
+          "Joshua Belofsky",
+          "Fengyuan Hu",
+          "Joohwan Kim",
+          "Ludwig Schmidt",
+          "Georgia Gkioxari",
+          "Jan Kautz",
+          "Yisong Yue",
+          "Yejin Choi",
+          "Yuke Zhu",
+          "Linxi Fan"
+        ],
+        "session_ids": [
+          "oral-4B",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-4B",
+        "poster_id": 8,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-pai-bench-a-comprehensive",
+        "title": "PAI-Bench: A Comprehensive Benchmark For Physical AI",
+        "authors": [
+          "Fengzhe Zhou",
+          "Jiannan Huang",
+          "Jialuo Li",
+          "Deva Ramanan",
+          "Humphrey Shi"
+        ],
+        "session_ids": [
+          "oral-4B",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-4B",
+        "poster_id": 9,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-refav-towards-planning-ce",
+        "title": "RefAV: Towards Planning-Centric Scenario Mining",
+        "authors": [
+          "Cainan Davidson",
+          "Deva Ramanan",
+          "Neehar Peri"
+        ],
+        "session_ids": [
+          "oral-4B",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-4B",
+        "poster_id": 10,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-soccermaster-a-vision-fou",
+        "title": "SoccerMaster: A Vision Foundation Model for Soccer Understanding",
+        "authors": [
+          "Haolin Yang",
+          "Jiayuan Rao",
+          "Haoning Wu",
+          "Weidi Xie"
+        ],
+        "session_ids": [
+          "oral-4B",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-4B",
+        "poster_id": 11,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-gaussianfluent-gaussian-s",
+        "title": "GaussianFluent: Gaussian Simulation for Dynamic Scenes with Mixed Materials",
+        "authors": [
+          "Bei Huang",
+          "Yixin Chen",
+          "Ruijie Lu",
+          "Gang Zeng",
+          "Hongbin Zha",
+          "Yuru Pei",
+          "Siyuan Huang"
+        ],
+        "session_ids": [
+          "oral-4C"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-4C"
+      },
+      {
+        "key": "award-saturday-memory-augmented-scene-un",
+        "title": "Memory-Augmented Scene Understanding and Exploration for Open- World Aerial Object-Goal Navigation",
+        "authors": [
+          "Jiacong Zhou",
+          "Jiaxu Miao",
+          "Yourun Lin",
+          "Xianyun Wang",
+          "Jun Xiao",
+          "Jun Yu"
+        ],
+        "session_ids": [
+          "oral-4C"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-4C"
+      },
+      {
+        "key": "award-saturday-monocular-open-vocabulary",
+        "title": "Monocular Open Vocabulary Occupancy Prediction for Indoor Scenes",
+        "authors": [
+          "Changqing Zhou",
+          "Yueru Luo",
+          "Han Zhang",
+          "Zeyu Jiang",
+          "Changhao Chen"
+        ],
+        "session_ids": [
+          "oral-4C",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-4C",
+        "poster_id": 18,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-r2-seg-training-free-ood",
+        "title": "R^2-Seg: Training-Free OOD Medical Tumor Segmentation via Anatomical Reasoning and Statistical Rejection",
+        "authors": [
+          "Shuaike Shen",
+          "Ke Liu",
+          "Jiaqing Xie",
+          "Shangde Gao",
+          "Chunhua Shen",
+          "Ge Liu",
+          "Mireia Crispin-Ortuzar",
+          "Shangqi Gao"
+        ],
+        "session_ids": [
+          "oral-4D"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-4D"
+      },
+      {
+        "key": "award-saturday-the-sa-fari-dataset-segme",
+        "title": "The SA-FARI Dataset: Segment Anything in Footage of Animals for Recognition and Identification",
+        "authors": [
+          "Dante Wasmuht",
+          "Otto Brookes",
+          "Maximilian Schall",
+          "Pablo Palencia",
+          "Christopher Beirne",
+          "Tilo Burghardt",
+          "Majid Mirmehdi",
+          "Hjalmar Kühl",
+          "Mimi Arandjelovic",
+          "Sam Pottie",
+          "Peter Bermant",
+          "Brandon Asheim",
+          "Yi Jin Toh",
+          "Adam Elzinga",
+          "Jason Allan Holmberg",
+          "Andrew Whitworth",
+          "Eleanor Flatt",
+          "Laura Gustafson",
+          "Chaitanya Ryali",
+          "Yuan-Ting Hu",
+          "Baishan Guo",
+          "Andrew Westbury",
+          "Kate Saenko",
+          "Didac Suris"
+        ],
+        "session_ids": [
+          "oral-4D"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-4D"
+      },
+      {
+        "key": "award-saturday-vggt-segmentor-geometry-e",
+        "title": "VGGT-Segmentor: Geometry-Enhanced Cross-View Segmentation",
+        "authors": [
+          "Yulu Gao",
+          "Bohao Zhang",
+          "Zongheng Tang",
+          "Jitong Liao",
+          "Wenjun Wu",
+          "Si Liu"
+        ],
+        "session_ids": [
+          "oral-4D",
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-4D",
+        "poster_id": 24,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-gaussianfluent-gaussian-s",
+        "title": "GaussianFluent: Gaussian Simulation for Dynamic Scenes with Mixed M\u0007aterials",
+        "authors": [
+          "Bei Huang",
+          "Yixin Chen",
+          "Ruijie Lu",
+          "Gang Zeng",
+          "Hongbin Zha",
+          "Yuru Pei",
+          "Siyuan Huang"
+        ],
+        "session_ids": [
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "poster_id": 14,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-memory-augmented-scene-un",
+        "title": "Memory-Augmented Scene Understanding and Exploration for Open- W\u0007orld Aerial Object-Goal Navigation",
+        "authors": [
+          "Jiacong Zhou",
+          "Jiaxu Miao",
+          "Yourun Lin",
+          "Xianyun Wang",
+          "Jun Xiao",
+          "Jun Yu"
+        ],
+        "session_ids": [
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "poster_id": 17,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-r2-seg-training-free-ood",
+        "title": "R^2-Seg: Training-Free OOD Medical Tumor Segmentation via A\u0007natomical Reasoning and Statistical Rejection",
+        "authors": [
+          "Shuaike Shen",
+          "Ke Liu",
+          "Jiaqing Xie",
+          "Shangde Gao",
+          "Chunhua Shen",
+          "Ge Liu",
+          "Mireia Crispin-Ortuzar",
+          "Shangqi Gao"
+        ],
+        "session_ids": [
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "poster_id": 22,
+        "poster_session": "poster-4"
+      },
+      {
+        "key": "award-saturday-the-sa-fari-dataset-segme",
+        "title": "The SA-FARI Dataset: Segment Anything in Footage of Animals for R\u0007ecognition and Identification",
+        "authors": [
+          "Dante Wasmuht",
+          "Otto Brookes",
+          "Maximilian Schall",
+          "Pablo Palencia",
+          "Christopher Beirne",
+          "Tilo Burghardt",
+          "Majid Mirmehdi",
+          "Hjalmar Kühl",
+          "Mimi Arandjelovic",
+          "Sam Pottie",
+          "Peter Bermant",
+          "Brandon Asheim",
+          "Yi Jin Toh",
+          "Adam Elzinga",
+          "Jason Allan Holmberg",
+          "Andrew Whitworth",
+          "Eleanor Flatt",
+          "Laura Gustafson",
+          "Chaitanya Ryali",
+          "Yuan-Ting Hu",
+          "Baishan Guo",
+          "Andrew Westbury",
+          "Kate Saenko",
+          "Didac Suris"
+        ],
+        "session_ids": [
+          "poster-4"
+        ],
+        "is_highlight": false,
+        "poster_id": 23,
+        "poster_session": "poster-4"
+      }
+    ],
+    "sunday": [
+      {
+        "key": "award-sunday-evidential-neural-radiance-",
+        "title": "Evidential Neural Radiance Fields",
+        "authors": [
+          "Ruxiao Duan",
+          "Alex Wong"
+        ],
+        "session_ids": [
+          "oral-5A",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-5A",
+        "poster_id": 1,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-global-aware-edge-prioritiz",
+        "title": "Global-Aware Edge Prioritization for Pose Graph Initialization",
+        "authors": [
+          "Tong Wei",
+          "Giorgos Tolias",
+          "Jiri Matas",
+          "Daniel Barath"
+        ],
+        "session_ids": [
+          "oral-5A",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-5A",
+        "poster_id": 2,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-molmo2-open-weights-and-dat",
+        "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
+        "authors": [
+          "Christopher Clark",
+          "Jieyu Zhang",
+          "Zixian Ma",
+          "Jae Sung Park",
+          "Rohun Tripathi",
+          "Sangho Lee",
+          "Mohammadreza Salehi",
+          "Jason Ren",
+          "Chris Dongjoo Kim",
+          "Yinuo Yang",
+          "Vincent Shao",
+          "Yue Yang",
+          "Weikai Huang",
+          "Ziqi Gao",
+          "Taira Anderson",
+          "Jianrui Zhang",
+          "Jitesh Jain",
+          "George Stoica",
+          "Ali Farhadi",
+          "Ranjay Krishna"
+        ],
+        "session_ids": [
+          "oral-5A",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-5A",
+        "poster_id": 3,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-u2flow-uncertainty-aware-un",
+        "title": "U^2Flow: Uncertainty-Aware Unsupervised Optical Flow Estimation",
+        "authors": [
+          "Xunpei Sun",
+          "Wenwei Lin",
+          "Yi Chang",
+          "Gang Chen"
+        ],
+        "session_ids": [
+          "oral-5A",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-5A",
+        "poster_id": 6,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-learning-latent-concepts-fo",
+        "title": "Learning Latent Concepts for Detecting Out-of-Distribution Objects",
+        "authors": [
+          "Ting Peng",
+          "Junhao Dong",
+          "Yew-Soon Ong"
+        ],
+        "session_ids": [
+          "oral-5B",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-5B",
+        "poster_id": 9,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-learning-diffeomorphism-for",
+        "title": "Learning Diffeomorphism for Medical Image Registration with Time-Embedded Architectures Using Semigroup Regularization",
+        "authors": [
+          "Mohammadjavad Matinkia",
+          "Nilanjan Ray"
+        ],
+        "session_ids": [
+          "oral-5C",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-5C",
+        "poster_id": 14,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-quadsync-quadrifocal-tensor",
+        "title": "QuadSync: Quadrifocal Tensor Synchronization via Tucker Decomposition",
+        "authors": [
+          "Daniel Miao",
+          "Gilad Lerman",
+          "Joe Kileel"
+        ],
+        "session_ids": [
+          "oral-5C"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-5C"
+      },
+      {
+        "key": "award-sunday-socialnav-training-human-in",
+        "title": "SocialNav: Training Human-Inspired Foundation Model for Socially- Aware Embodied Navigation",
+        "authors": [
+          "Ziyi Chen",
+          "Yingnan Guo",
+          "Zedong Chu",
+          "Minghua Luo",
+          "Yanfen Shen",
+          "Mingchao Sun",
+          "Junjun Hu",
+          "Shichao Xie",
+          "Yang Kuan",
+          "Pei Shi",
+          "Zhining Gu",
+          "Lu Liu",
+          "Honglin Han",
+          "Xiaolong Wu",
+          "Mu Xu",
+          "Yu Zhang"
+        ],
+        "session_ids": [
+          "oral-5C",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-5C",
+        "poster_id": 16,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-immeriris-a-large-scale-dat",
+        "title": "ImmerIris: A Large-Scale Dataset and Benchmark for Off-Axis and Unconstrained Iris Recognition in Immersive Applications",
+        "authors": [
+          "Yuxi Mi",
+          "Qiuyang Yuan",
+          "Zhizhou Zhong",
+          "Xuan Zhao",
+          "Jiaogen Zhou",
+          "Fubao Zhu",
+          "Jihong Guan",
+          "Shuigeng Zhou"
+        ],
+        "session_ids": [
+          "oral-5D",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-5D",
+        "poster_id": 20,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-olatverse-a-large-scale-rea",
+        "title": "OLATverse: A Large-scale Real-world Object Dataset with Precise Lighting Control",
+        "authors": [
+          "Xilong Zhou",
+          "Jianchun Chen",
+          "Pramod Rao",
+          "Timo Teufel",
+          "Linjie Lyu",
+          "Tigran Minasian",
+          "Oleksandr Sotnychenko",
+          "Xiao-Xiao Long",
+          "Marc Habermann",
+          "Christian Theobalt"
+        ],
+        "session_ids": [
+          "oral-5D",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-5D",
+        "poster_id": 21,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-opendance-multimodal-contro",
+        "title": "OpenDance: Multimodal Controllable 3D Dance Generation with Large-scale Internet Data",
+        "authors": [
+          "Jinlu Zhang",
+          "Zixi Kang",
+          "Libin Liu",
+          "Jianlong Chang",
+          "Qi Tian",
+          "Feng Gao",
+          "Yizhou Wang"
+        ],
+        "session_ids": [
+          "oral-5D",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-5D",
+        "poster_id": 22,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-relightable-holoported-char",
+        "title": "Relightable Holoported Characters: Capturing and Relighting Dynamic Human Performance from Sparse Views",
+        "authors": [
+          "Kunwar Maheep Singh",
+          "Jianchun Chen",
+          "Vladislav Golyanik",
+          "Stephan J. Garbin",
+          "Thabo Beeler",
+          "Rishabh Dabral",
+          "Marc Habermann",
+          "Christian Theobalt"
+        ],
+        "session_ids": [
+          "oral-5D",
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "oral_position": 6,
+        "oral_session": "oral-5D",
+        "poster_id": 24,
+        "poster_session": "poster-5"
+      },
+      {
+        "key": "award-sunday-learning-eigenstructures-of",
+        "title": "Learning Eigenstructures of Unstructured Data Manifolds",
+        "authors": [
+          "Roy Velich",
+          "Arkadi Piven",
+          "David Bensaïd",
+          "Daniel Cremers",
+          "Thomas Dagès",
+          "Ron Kimmel"
+        ],
+        "session_ids": [
+          "oral-6A",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-6A",
+        "poster_id": 4,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-mapping-networks",
+        "title": "Mapping Networks",
+        "authors": [
+          "Lord Sen",
+          "Shyamapada Mukherjee"
+        ],
+        "session_ids": [
+          "oral-6A",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-6A",
+        "poster_id": 5,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-cinebrain-a-large-scale-mul",
+        "title": "CineBrain: A Large-Scale Multi-Modal Audiovisual Brain Dataset for Brain-Conditioned Video Generation",
+        "authors": [
+          "Jianxiong Gao",
+          "Yichang Liu",
+          "Baofeng Yang",
+          "Jianfeng Feng",
+          "Yanwei Fu"
+        ],
+        "session_ids": [
+          "oral-6B",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-6B",
+        "poster_id": 6,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-hearing-the-room-through-th",
+        "title": "Hearing the Room Through the Shape of the Drum: Modal-Guided Sound Recovery from Multi-Point Surface Vibrations",
+        "authors": [
+          "Shai Bagon",
+          "Matan Kichler",
+          "Mark Sheinin"
+        ],
+        "session_ids": [
+          "oral-6B",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-6B",
+        "poster_id": 7,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-thinking-with-drafts-specul",
+        "title": "Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding",
+        "authors": [
+          "Pengfei Hu",
+          "Meng Cao",
+          "Yingyao Wang",
+          "Yi Wang",
+          "Jiahua Dong",
+          "Jun Song",
+          "Yu Cheng",
+          "Bo Zheng",
+          "Xiaodan Liang"
+        ],
+        "session_ids": [
+          "oral-6B",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-6B",
+        "poster_id": 9,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-dual-level-adapter-boosting",
+        "title": "Dual-level Adapter Boosting Prompt-free Curvilinear Structure Segmentation",
+        "authors": [
+          "Kai Zhu",
+          "Li Chen",
+          "Jun Cheng"
+        ],
+        "session_ids": [
+          "oral-6C",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 3,
+        "oral_session": "oral-6C",
+        "poster_id": 13,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-medic-ad-towards-medical-vi",
+        "title": "Medic-AD: Towards Medical Vision-Language Model's Clinical Intelligence",
+        "authors": [
+          "Woohyeon Park",
+          "Jaeik Kim",
+          "Sunghwan Steve Cho",
+          "Pa Hong",
+          "Wookyoung Jeong",
+          "Yoojin Nam",
+          "Namjoon Kim",
+          "Ginny Y. Wong",
+          "Ka Chun Cheung",
+          "Jaeyoung Do"
+        ],
+        "session_ids": [
+          "oral-6C",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 5,
+        "oral_session": "oral-6C",
+        "poster_id": 15,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-efficient-unrolled-networks",
+        "title": "Efficient Unrolled Networks for Large-Scale 3D Inverse Problems",
+        "authors": [
+          "Romain Vo",
+          "Julián Tachella"
+        ],
+        "session_ids": [
+          "oral-6D",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 1,
+        "oral_session": "oral-6D",
+        "poster_id": 17,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-fedadamom-adaptive-momentum",
+        "title": "FedAdamom: Adaptive Momentum for Improved Generalization in Federated Optimization, Wenjie Hou, Tianxiang Chen, Feng Wang, Tiantong Wu, Zhiming Zheng, Shaoting Tang, Wei Yang Bryan Lim",
+        "authors": [],
+        "session_ids": [
+          "oral-6D",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 2,
+        "oral_session": "oral-6D",
+        "poster_id": 18,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-texvent-asynchronous-event",
+        "title": "Texvent: Asynchronous Event Data Simulation via Text Prompt",
+        "authors": [
+          "Ruofei Wang",
+          "Peiqi Duan",
+          "Ka Chun Cheung",
+          "Simon See",
+          "Boxin Shi",
+          "Renjie Wan"
+        ],
+        "session_ids": [
+          "oral-6D",
+          "poster-6"
+        ],
+        "is_highlight": false,
+        "oral_position": 4,
+        "oral_session": "oral-6D",
+        "poster_id": 20,
+        "poster_session": "poster-6"
+      },
+      {
+        "key": "award-sunday-quadsync-quadrifocal-tensor",
+        "title": "QuadSync: QuadrifocalTensor Synchronization viaTucker Decomposition",
+        "authors": [
+          "Daniel Miao",
+          "Gilad Lerman",
+          "Joe Kileel"
+        ],
+        "session_ids": [
+          "poster-5"
+        ],
+        "is_highlight": false,
+        "poster_id": 15,
+        "poster_session": "poster-5"
+      }
+    ]
   }
 }
